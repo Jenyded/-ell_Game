@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public GameObject enemy;    
-
-    // Start is called before the first frame update
+    public GameObject enemy;
+    
     void Start()
     {
         StartCoroutine(Spawn_Enemy());       

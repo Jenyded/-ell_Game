@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Finish_panelTag
   - EnemyTag
+  - WallTag
   layers:
   - Default
   - TransparentFX
