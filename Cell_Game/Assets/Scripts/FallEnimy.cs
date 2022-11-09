@@ -12,6 +12,9 @@ public class FallEnimy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Finish_panelTag")
-            Instantiate(enemyEffect, transform.position, Quaternion.identity);        
+            Instantiate(enemyEffect, transform.position, Quaternion.identity);
+
+        if (other.gameObject.tag == "Player")
+            Instantiate(enemyEffect, transform.position, Quaternion.identity);
     }
 }
