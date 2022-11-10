@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7830413327721230529}
   - component: {fileID: 7830413327721230528}
   - component: {fileID: 7830413327721230531}
+  - component: {fileID: 8199659610012409236}
   m_Layer: 0
   m_Name: Bonus
   m_TagString: BonusTag
@@ -138,3 +139,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.70685464, y: 0.70567524}
   m_EdgeRadius: 0
+--- !u!114 &8199659610012409236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7830413327721230530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804d2edadb9be824abb71c49d9b110b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 3
+  bonusEffect: {fileID: 8422609248598337081, guid: 69dde2191c7764d4ab3a744bb25094fc, type: 3}
