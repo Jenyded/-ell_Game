@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FallEnemy : MonoBehaviour
+public class FallEnimy : MonoBehaviour
 {
     [SerializeField] private float fallSpeed = 3f;
     public GameObject enemyEffect;
