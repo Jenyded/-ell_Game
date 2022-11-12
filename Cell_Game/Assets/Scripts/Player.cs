@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private Material materialDefault;
     private SpriteRenderer spriteRend;
 
+    public GameObject shield;
+
     private void Start()
     {
         spriteRend = GetComponent<SpriteRenderer>();
@@ -35,7 +37,17 @@ public class Player : MonoBehaviour
             {
                 Invoke("ResetMaterial", 0.2f);
             }
-        } 
+        }
+
+        if (collision.CompareTag("LifeTag"))
+        {
+            life++;
+            Destroy(collision.gameObject);
+        }
+        else if (collision.CompareTag("ShieldTag"))
+        {
+            shield.SetActive(true);
+        }
     }
 
     void ResetMaterial()

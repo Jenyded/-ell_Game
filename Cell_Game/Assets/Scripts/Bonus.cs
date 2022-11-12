@@ -23,7 +23,7 @@ public class Bonus : MonoBehaviour
             score -= 5;
         }
 
-        if(score < -1)
+        if(score <= 0)
         {
             score = 0;
         }

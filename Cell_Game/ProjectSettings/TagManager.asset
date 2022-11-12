@@ -8,6 +8,8 @@ TagManager:
   - EnemyTag
   - WallTag
   - BonusTag
+  - LifeTag
+  - ShieldTag
   layers:
   - Default
   - TransparentFX
