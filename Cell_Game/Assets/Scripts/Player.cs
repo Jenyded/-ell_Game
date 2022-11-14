@@ -1,35 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour 
 {
     [SerializeField]
     private int life = 5;
+    [SerializeField] TMP_Text lifeText;
 
     private Material materialBlink;
     private Material materialDefault;
-    private SpriteRenderer spriteRend;
+    private SpriteRenderer spriteRend;    
 
     public GameObject shield;
+    public ShieldTimer shieldTimer;
+    private bool _shild = false;
+
 
     private void Start()
     {
         spriteRend = GetComponent<SpriteRenderer>();
 
         materialBlink = Resources.Load("PlayerBlink", typeof(Material)) as Material;
-        materialDefault = spriteRend.material;
+        materialDefault = spriteRend.material;        
+    }
+
+    private void Update()
+    {
+        lifeText.text = life.ToString();
+       
+        if (shieldTimer.isCoolDown == false)
+        {
+            _shild = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    {        
         if (collision.CompareTag("EnemyTag"))
         {
-            life--;
-            spriteRend.material = materialBlink;
-
-
-            if (life <= 0)
+            if (_shild == false)
+            {
+             life--;
+             spriteRend.material = materialBlink;
+            }
+            
+            if (life <= -1)
             {
                 KillPlayer(); 
             }
@@ -44,10 +62,15 @@ public class Player : MonoBehaviour
             life++;
             Destroy(collision.gameObject);
         }
-        else if (collision.CompareTag("ShieldTag"))
+       
+        if (collision.CompareTag("ShieldTag"))
         {
+            _shild = true;
             shield.SetActive(true);
-        }
+            shieldTimer.gameObject.SetActive(true);
+            shieldTimer.isCoolDown = true;
+            Destroy(collision.gameObject);             
+        }         
     }
 
     void ResetMaterial()
@@ -58,5 +81,5 @@ public class Player : MonoBehaviour
     void KillPlayer()
     {
         Destroy(gameObject);
-    }
+    }   
 }

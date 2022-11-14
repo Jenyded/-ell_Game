@@ -28,6 +28,7 @@ public class Bonus : MonoBehaviour
             score = 0;
         }
     }
+
     private void Update()
     {
         scoreText.text = score.ToString();
