@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
-public class Bonus : MonoBehaviour
+public class Scoring : MonoBehaviour
 {
     public int score;
     [SerializeField] TMP_Text scoreText;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "BonusTag")
+        if (other.gameObject.tag == "BonusTag")
         {
             Destroy(other.gameObject);
             score++;
@@ -23,7 +20,7 @@ public class Bonus : MonoBehaviour
             score -= 5;
         }
 
-        if(score <= 0)
+        if (score <= 0)
         {
             score = 0;
         }
@@ -34,5 +31,3 @@ public class Bonus : MonoBehaviour
         scoreText.text = score.ToString();
     }
 }
-
-   

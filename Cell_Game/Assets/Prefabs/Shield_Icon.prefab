@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3503071509411401732}
   - component: {fileID: 141586854958136021}
   - component: {fileID: 8769843013743445075}
-  - component: {fileID: 5270771511525532115}
+  - component: {fileID: -3779012570149535439}
+  - component: {fileID: -1397498970428420699}
   m_Layer: 0
   m_Name: Shield_Icon
   m_TagString: ShieldTag
@@ -134,7 +135,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5270771511525532115
+--- !u!114 &-3779012570149535439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,8 +144,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7362780276147569825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 792694dc02770cf46953a665c2898553, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ce8ec75ba6ff9148830fdb3c9619163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 3
-  shieldEffect: {fileID: 8422609248598337081, guid: 69dde2191c7764d4ab3a744bb25094fc, type: 3}
+  _fallSpeed_y: 3
+--- !u!114 &-1397498970428420699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362780276147569825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2093cea8cc0f5047aabb7ed1f7d5271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

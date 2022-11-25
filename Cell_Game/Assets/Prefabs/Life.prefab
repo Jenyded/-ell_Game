@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8507936732257313154}
   - component: {fileID: 8507936732257313155}
   - component: {fileID: 8507936732257313153}
-  - component: {fileID: 8507936732257313152}
+  - component: {fileID: 141436295567323985}
+  - component: {fileID: 4681857745617141815}
   m_Layer: 0
   m_Name: Life
   m_TagString: LifeTag
@@ -102,7 +103,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4.9
---- !u!114 &8507936732257313152
+--- !u!50 &141436295567323985
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507936732257313156}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &4681857745617141815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,8 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8507936732257313156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2301e7995a3974d98e660072d866d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ce8ec75ba6ff9148830fdb3c9619163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 3
-  lifeEffect: {fileID: 8422609248598337081, guid: 69dde2191c7764d4ab3a744bb25094fc, type: 3}
+  _fallSpeed_y: 3

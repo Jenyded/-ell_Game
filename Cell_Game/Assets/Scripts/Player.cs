@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Player : MonoBehaviour 
+public class Player : MonoBehaviour
 {
     [SerializeField]
-    private int life = 5;
+    protected int life = 5;
     [SerializeField] TMP_Text lifeText;
 
     private Material materialBlink;
     private Material materialDefault;
-    private SpriteRenderer spriteRend;    
+    private SpriteRenderer spriteRend;
 
     public GameObject shield;
     public ShieldTimer shieldTimer;
@@ -24,13 +24,13 @@ public class Player : MonoBehaviour
         spriteRend = GetComponent<SpriteRenderer>();
 
         materialBlink = Resources.Load("PlayerBlink", typeof(Material)) as Material;
-        materialDefault = spriteRend.material;        
+        materialDefault = spriteRend.material;
     }
 
     private void Update()
     {
         lifeText.text = life.ToString();
-       
+
         if (shieldTimer.isCoolDown == false)
         {
             _shild = false;
@@ -38,18 +38,19 @@ public class Player : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {        
+    {
+        return;
         if (collision.CompareTag("EnemyTag"))
         {
             if (_shild == false)
             {
-             life--;
-             spriteRend.material = materialBlink;
+                life--;
+                spriteRend.material = materialBlink;
             }
-            
+
             if (life <= -1)
             {
-                KillPlayer(); 
+                KillPlayer();
             }
             else
             {
@@ -62,15 +63,15 @@ public class Player : MonoBehaviour
             life++;
             Destroy(collision.gameObject);
         }
-       
+
         if (collision.CompareTag("ShieldTag"))
         {
             _shild = true;
             shield.SetActive(true);
             shieldTimer.gameObject.SetActive(true);
             shieldTimer.isCoolDown = true;
-            Destroy(collision.gameObject);             
-        }         
+            Destroy(collision.gameObject);
+        }
     }
 
     void ResetMaterial()
@@ -81,5 +82,6 @@ public class Player : MonoBehaviour
     void KillPlayer()
     {
         Destroy(gameObject);
-    }   
+    }
 }
+

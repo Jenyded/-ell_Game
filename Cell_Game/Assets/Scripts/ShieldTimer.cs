@@ -4,16 +4,15 @@ using UnityEngine.UI;
 public class ShieldTimer : MonoBehaviour
 {
     public float coolDown;
-    [HideInInspector] public bool isCoolDown;
-   
+    [HideInInspector] public bool isCoolDown;   
 
-    private Image shieldImage;
-    private Player player;
+    private Image _shieldImage;
+    private Player _player;
     
     private void Start()
     {
-        shieldImage = GetComponent<Image>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        _shieldImage = GetComponent<Image>();
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         isCoolDown = true;
     }
 
@@ -21,21 +20,20 @@ public class ShieldTimer : MonoBehaviour
     {
         if (isCoolDown)
         {
-            shieldImage.fillAmount -= 1 / coolDown * Time.deltaTime;
+            _shieldImage.fillAmount -= 1 / coolDown * Time.deltaTime;
             
-            if(shieldImage.fillAmount <= 0)
+            if(_shieldImage.fillAmount <= 0)
             {
-                shieldImage.fillAmount = 1;
+                _shieldImage.fillAmount = 1;
                 isCoolDown = false;
-                player.shield.SetActive(false);
-                gameObject.SetActive(false);  
-                
+                _player.shield.SetActive(false);
+                gameObject.SetActive(false);                 
             }
         } 
     }
 
     public void ResetTimer()
     {
-        shieldImage.fillAmount = 1;
+        _shieldImage.fillAmount = 1;
     }
 }
