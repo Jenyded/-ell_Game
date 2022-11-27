@@ -1,15 +1,10 @@
 using UnityEngine;
 
-public class ClashEnemy : Clash
+public class ClashBonus : Clash
 {
     public override void ClashCollisionWithObject(string tag)
     {
         if (tag.Equals("Player"))
-        {
-            Enable≈ffect();
-        }
-
-        if (tag.Equals("Finish_panelTag"))
         {
             Enable≈ffect();
         }

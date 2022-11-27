@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FinishDestroyObject : EffectCollision
@@ -7,7 +5,6 @@ public class FinishDestroyObject : EffectCollision
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "EnemyTag")
-            
             Destroy(other.gameObject);
 
         if (other.gameObject.tag == "BonusTag")
@@ -18,5 +15,5 @@ public class FinishDestroyObject : EffectCollision
 
         if (other.gameObject.tag == "ShieldTag")
             Destroy(other.gameObject);
-    }
+    } 
 }

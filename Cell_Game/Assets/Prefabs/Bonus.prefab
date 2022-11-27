@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7830413327721230528}
   - component: {fileID: 7830413327721230531}
   - component: {fileID: -3053297438321223340}
+  - component: {fileID: 7881008864937208894}
   m_Layer: 0
   m_Name: Bonus
   m_TagString: BonusTag
@@ -152,3 +153,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fallSpeed_y: 3
+--- !u!114 &7881008864937208894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7830413327721230530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd791b4fc6b9a454390e5b37bb577147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effect: {fileID: 8422609248598337081, guid: 69dde2191c7764d4ab3a744bb25094fc, type: 3}
