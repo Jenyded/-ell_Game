@@ -11,7 +11,7 @@ public abstract class Clash : EffectCollision
     /// <summary>
     /// Çàïóñêàåò ıôôåêò
     /// </summary>
-    public abstract void EnableÅffect();
+    public abstract void EnableEffect();
 
 
     private void Start()

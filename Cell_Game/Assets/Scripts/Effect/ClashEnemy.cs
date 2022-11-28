@@ -6,16 +6,16 @@ public class ClashEnemy : Clash
     {
         if (tag.Equals("Player"))
         {
-            Enable≈ffect();
+            EnableEffect();
         }
 
         if (tag.Equals("Finish_panelTag"))
         {
-            Enable≈ffect();
+            EnableEffect();
         }
     }
 
-    public override void Enable≈ffect()
+    public override void EnableEffect()
     {
         _effect.SetActive(true);
         Instantiate(_effect, transform.position, Quaternion.identity);
