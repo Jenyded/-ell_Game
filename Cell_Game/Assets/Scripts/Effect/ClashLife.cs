@@ -7,6 +7,7 @@ public class ClashLife : Clash
         if (tag.Equals("Player"))
         {
             EnableEffect();
+            base.BaseDestroy();
         }
     }
 

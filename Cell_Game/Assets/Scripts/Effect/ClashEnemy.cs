@@ -7,11 +7,13 @@ public class ClashEnemy : Clash
         if (tag.Equals("Player"))
         {
             EnableEffect();
+            base.BaseDestroy();
         }
 
         if (tag.Equals("Finish_panelTag"))
         {
             EnableEffect();
+            base.BaseDestroy();
         }
     }
 

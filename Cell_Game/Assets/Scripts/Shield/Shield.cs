@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Shield : Player
+public class Shield : PlayerScore
 {
     private Material _materialBlink;
     private Material _materialDefault;
@@ -10,7 +8,7 @@ public class Shield : Player
 
     public GameObject shield;
     public ShieldTimer shieldTimer;
-    private bool _shild = false;
+    public static bool _shild = false;
 
     private void Start()
     {
@@ -26,13 +24,13 @@ public class Shield : Player
             _shild = false;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("EnemyTag"))
         {
             if (_shild == false)
             {
-                life--;
                 _spriteRend.material = _materialBlink;
             }
 
@@ -54,6 +52,6 @@ public class Shield : Player
 
     void ResetMaterial()
     {
-        _spriteRend.material = _materialDefault;
-    }   
+        _spriteRend.material = _materialDefault;        
+    }    
 }

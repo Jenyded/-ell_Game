@@ -8,6 +8,11 @@ public class EffectCollision : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         var tag = collider.tag;
-        collision?.Invoke(tag);
+        collision?.Invoke(tag);        
+    }
+
+    protected void BaseDestroy()
+    {
+        Destroy(gameObject);
     }
 }

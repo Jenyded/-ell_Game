@@ -7,12 +7,12 @@ public class ShieldTimer : MonoBehaviour
     [HideInInspector] public bool isCoolDown;   
 
     private Image _shieldImage;
-    private Player _player;
+    private Shield _playerShield;
     
     private void Start()
     {
         _shieldImage = GetComponent<Image>();
-        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        _playerShield = GameObject.FindGameObjectWithTag("Player").GetComponent<Shield>();
         isCoolDown = true;
     }
 
@@ -26,7 +26,7 @@ public class ShieldTimer : MonoBehaviour
             {
                 _shieldImage.fillAmount = 1;
                 isCoolDown = false;
-                _player.shield.SetActive(false);
+                _playerShield.shield.SetActive(false);
                 gameObject.SetActive(false);                 
             }
         } 

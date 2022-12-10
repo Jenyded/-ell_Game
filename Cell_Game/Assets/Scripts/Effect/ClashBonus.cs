@@ -7,6 +7,7 @@ public class ClashBonus : Clash
         if (tag.Equals("Player"))
         {
             EnableEffect();
+            base.BaseDestroy();
         }
     }
 
