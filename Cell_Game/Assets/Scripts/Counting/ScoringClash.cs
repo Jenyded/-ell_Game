@@ -32,5 +32,5 @@ public abstract class ScoringClash : EffectCollision
     {
         scoreText.text = score.ToString();
         lifeText.text = life.ToString();
-    }
+    }    
 }

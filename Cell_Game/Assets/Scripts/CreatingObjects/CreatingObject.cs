@@ -27,53 +27,35 @@ public class CreatingObject : MonoBehaviour
         _timeBonus += Time.deltaTime;
         if (_timeBonus >= interval—reationBonus)
         {
-            Time—reationBonus();
+            Time—reation(bonus);
             _timeBonus = 0;
         }
 
         _timeLife += Time.deltaTime;
-        if(_timeLife >= interval—reationLife)
+        if (_timeLife >= interval—reationLife)
         {
-            Time—reationLife();
+            Time—reation(life);
             _timeLife = 0;
-        }       
+        }
 
         _timeShield += Time.deltaTime;
-        if(_timeShield >= interval—reationShield)
+        if (_timeShield >= interval—reationShield)
         {
-            Time—reationShield();
+            Time—reation(shield);
             _timeShield = 0;
         }
 
         _timeEnemy += Time.deltaTime;
         if (_timeEnemy >= interval—reationEnemy)
         {
-            Time—reationEnemy();
+            Time—reation(enemy);
             _timeEnemy = 0;
-        }
-    }
+        }       
+    }   
 
-    private void Time—reationEnemy()
+    private void Time—reation(GameObject obg)
     {
-        GameObject copy = Instantiate(enemy, new Vector2(Random.Range(_leftSide, _rightSide), _heightInstance), Quaternion.identity);
-        Destroy(copy, _timeDestroy);                
-    }
-
-    private void Time—reationBonus()
-    {
-        GameObject copy = Instantiate(bonus, new Vector2(Random.Range(_leftSide, _rightSide), _heightInstance), Quaternion.identity);
-        Destroy(copy, _timeDestroy);        
-    }
-
-    private void Time—reationLife()
-    {        
-        GameObject copy = Instantiate(life, new Vector2(Random.Range(_leftSide, _rightSide), _heightInstance), Quaternion.identity);
-        Destroy(copy, _timeDestroy);               
-    }
-
-    private void Time—reationShield()
-    {
-        GameObject copy = Instantiate(shield, new Vector2(Random.Range(_leftSide, _rightSide), _heightInstance), Quaternion.identity);
-        Destroy(copy, _timeDestroy);               
+        GameObject copy = Instantiate(obg, new Vector2(Random.Range(_leftSide, _rightSide), _heightInstance), Quaternion.identity);
+        Destroy(copy, _timeDestroy);
     }
 }

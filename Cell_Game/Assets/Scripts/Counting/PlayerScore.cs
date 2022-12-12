@@ -18,7 +18,7 @@ public class PlayerScore : ScoringClash
 
         if (tag.Equals("EnemyTag"))
         {
-            if (Shield._shild != true)
+            if (Shield._shield != true)
             {
                 life--;
                 score -= 5;

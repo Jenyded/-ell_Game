@@ -8,20 +8,20 @@ public class Shield : PlayerScore
 
     public GameObject shield;
     public ShieldTimer shieldTimer;
-    public static bool _shild = false;
+    public static bool _shield = false;     
 
     private void Start()
     {
         _spriteRend = GetComponent<SpriteRenderer>();
         _materialBlink = Resources.Load("PlayerBlink", typeof(Material)) as Material;
-        _materialDefault = _spriteRend.material;
+        _materialDefault = _spriteRend.material;        
     }
 
     private void Update()
     {
         if (shieldTimer.isCoolDown == false)
         {
-            _shild = false;
+            _shield = false;
         }
     }
 
@@ -29,7 +29,7 @@ public class Shield : PlayerScore
     {
         if (collision.CompareTag("EnemyTag"))
         {
-            if (_shild == false)
+            if (_shield == false)
             {
                 _spriteRend.material = _materialBlink;
             }
@@ -42,7 +42,7 @@ public class Shield : PlayerScore
 
         if (collision.CompareTag("ShieldTag"))
         {
-            _shild = true;
+            _shield = true;
             shield.SetActive(true);
             shieldTimer.gameObject.SetActive(true);
             shieldTimer.isCoolDown = true;
@@ -52,6 +52,6 @@ public class Shield : PlayerScore
 
     void ResetMaterial()
     {
-        _spriteRend.material = _materialDefault;        
-    }    
+        _spriteRend.material = _materialDefault;
+    }
 }
