@@ -12,10 +12,10 @@ public class CreatingObject : MonoBehaviour
     private float _timeShield;
     private float _timeEnemy;
 
-    [SerializeField] private float interval—reationBonus;
-    [SerializeField] private float interval—reationLife;
-    [SerializeField] private float interval—reationShield;
-    [SerializeField] private float interval—reationEnemy;
+    [SerializeField] private float _intervalCreationBonus;
+    [SerializeField] private float _intervalCreationLife;
+    [SerializeField] private float _intervalCreationShield;
+    [SerializeField] private float _intervalCreationEnemy;
     
     private float _leftSide = -1.96f;
     private float _rightSide = 1.49f;
@@ -25,35 +25,35 @@ public class CreatingObject : MonoBehaviour
     void Update()
     {
         _timeBonus += Time.deltaTime;
-        if (_timeBonus >= interval—reationBonus)
+        if (_timeBonus >= _intervalCreationBonus)
         {
-            Time—reation(_bonus);
+            TimeCreation(_bonus);
             _timeBonus = 0;
         }
 
         _timeLife += Time.deltaTime;
-        if (_timeLife >= interval—reationLife)
+        if (_timeLife >= _intervalCreationLife)
         {
-            Time—reation(_life);
+            TimeCreation(_life);
             _timeLife = 0;
         }
 
         _timeShield += Time.deltaTime;
-        if (_timeShield >= interval—reationShield)
+        if (_timeShield >= _intervalCreationShield)
         {
-            Time—reation(_shield);
+            TimeCreation(_shield);
             _timeShield = 0;
         }
 
         _timeEnemy += Time.deltaTime;
-        if (_timeEnemy >= interval—reationEnemy)
+        if (_timeEnemy >= _intervalCreationEnemy)
         {
-            Time—reation(_enemy);
+            TimeCreation(_enemy);
             _timeEnemy = 0;
         }        
     }    
 
-    private void Time—reation(GameObject obg)
+    private void TimeCreation(GameObject obg)
     {
         GameObject copy = Instantiate(obg, new Vector2(Random.Range(_leftSide, _rightSide), _heightInstance), Quaternion.identity);
         Destroy(copy, _timeDestroy);
