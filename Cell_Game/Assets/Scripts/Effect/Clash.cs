@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class Clash : EffectCollision
 {
-    [SerializeField] protected GameObject _effect;
+    [SerializeField] protected GameObject Effect;
    
     public abstract void ClashCollisionWithObject(string tag);
     
@@ -11,7 +11,7 @@ public abstract class Clash : EffectCollision
 
     private void Start()
     {
-        collision += ClashCollision;
+        Collision += ClashCollision;
     }
     
     public void ClashCollision(string tag)
@@ -21,6 +21,6 @@ public abstract class Clash : EffectCollision
 
     private void OnDestroy()
     {
-        collision -= ClashCollision;
+        Collision -= ClashCollision;
     }
 }

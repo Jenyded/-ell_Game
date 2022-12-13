@@ -3,11 +3,11 @@ using TMPro;
 
 public abstract class ScoringClash : EffectCollision
 {
-    protected int score;
-    [SerializeField] TMP_Text scoreText;
+    protected int Score;
+    [SerializeField] TMP_Text _scoreText;
 
-    protected int life = 5;
-    [SerializeField] TMP_Text lifeText;
+    protected int Life = 5;
+    [SerializeField] TMP_Text _lifeText;
 
     public abstract void PointsManager(string tag);
     public abstract void KillPlayer();
@@ -15,7 +15,7 @@ public abstract class ScoringClash : EffectCollision
 
     private void Start()
     {
-        collision += ClashCollision;
+        Collision += ClashCollision;
     }
 
     public void ClashCollision(string tag)
@@ -25,12 +25,12 @@ public abstract class ScoringClash : EffectCollision
 
     private void OnDestroy()
     {
-        collision -= ClashCollision;
+        Collision -= ClashCollision;
     }
 
     private void Update()
     {
-        scoreText.text = score.ToString();
-        lifeText.text = life.ToString();
-    }    
+        _scoreText.text = Score.ToString();
+        _lifeText.text = Life.ToString();
+    }      
 }

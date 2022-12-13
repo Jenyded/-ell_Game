@@ -8,27 +8,27 @@ public class PlayerScore : ScoringClash
     {
         if (tag.Equals("BonusTag"))
         {
-            score++;                       
+            Score++;                       
         }
 
         if (tag.Equals("LifeTag"))
         {
-            life++;
+            Life++;
         }
 
         if (tag.Equals("EnemyTag"))
         {
-            if (Shield._shield != true)
+            if (Shield.shieldActivity != true)
             {
-                life--;
-                score -= 5;
+                Life--;
+                Score -= 2;
 
-                if (score <= 0)
+                if (Score <= 0)
                 {
-                    score = 0;
+                    Score = 0;
                 }
 
-                if (life <= -1)
+                if (Life <= -1)
                 {
                     KillPlayer();
                 }

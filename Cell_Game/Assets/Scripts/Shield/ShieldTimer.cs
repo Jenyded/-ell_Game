@@ -26,7 +26,7 @@ public class ShieldTimer : MonoBehaviour
             {
                 _shieldImage.fillAmount = 1;
                 isCoolDown = false;
-                _playerShield.shield.SetActive(false);
+                _playerShield.shieldObj.SetActive(false);
                 gameObject.SetActive(false);                 
             }
         } 

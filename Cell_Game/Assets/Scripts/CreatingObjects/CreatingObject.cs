@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class CreatingObject : MonoBehaviour
 {
-    [SerializeField] private GameObject bonus;
-    [SerializeField] private GameObject life;
-    [SerializeField] private GameObject shield;
-    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject _bonus;
+    [SerializeField] private GameObject _life;
+    [SerializeField] private GameObject _shield;
+    [SerializeField] private GameObject _enemy;
 
     private float _timeBonus;
     private float _timeLife;
@@ -27,31 +27,31 @@ public class CreatingObject : MonoBehaviour
         _timeBonus += Time.deltaTime;
         if (_timeBonus >= interval—reationBonus)
         {
-            Time—reation(bonus);
+            Time—reation(_bonus);
             _timeBonus = 0;
         }
 
         _timeLife += Time.deltaTime;
         if (_timeLife >= interval—reationLife)
         {
-            Time—reation(life);
+            Time—reation(_life);
             _timeLife = 0;
         }
 
         _timeShield += Time.deltaTime;
         if (_timeShield >= interval—reationShield)
         {
-            Time—reation(shield);
+            Time—reation(_shield);
             _timeShield = 0;
         }
 
         _timeEnemy += Time.deltaTime;
         if (_timeEnemy >= interval—reationEnemy)
         {
-            Time—reation(enemy);
+            Time—reation(_enemy);
             _timeEnemy = 0;
-        }       
-    }   
+        }        
+    }    
 
     private void Time—reation(GameObject obg)
     {

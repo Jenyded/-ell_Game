@@ -19,7 +19,7 @@ public class ClashEnemy : Clash
 
     public override void EnableEffect()
     {
-        _effect.SetActive(true);
-        Instantiate(_effect, transform.position, Quaternion.identity);
+        Effect.SetActive(true);
+        Instantiate(Effect, transform.position, Quaternion.identity);
     }
 }

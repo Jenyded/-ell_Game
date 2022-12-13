@@ -272,8 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309aa41f7e7a23147b0abf200db5767a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1230719434}
-  lifeText: {fileID: 2139053116}
+  _scoreText: {fileID: 1230719434}
+  _lifeText: {fileID: 2139053116}
 --- !u!114 &6881319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,9 +286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca174233241ab7742bd0b7d6259e8cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1230719434}
-  lifeText: {fileID: 2139053116}
-  shield: {fileID: 2038436459}
+  _scoreText: {fileID: 0}
+  _lifeText: {fileID: 0}
+  shieldObj: {fileID: 2038436459}
   shieldTimer: {fileID: 2048503482}
 --- !u!1 &38603122
 GameObject:
@@ -744,10 +744,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451308af82a919642a6baf7509d67236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonus: {fileID: 7830413327721230530, guid: 097824de953fe2141863b57ba7eaef72, type: 3}
-  life: {fileID: 8507936732257313156, guid: b3b14d0a6f5f831439f85659706db3b9, type: 3}
-  shield: {fileID: 7362780276147569825, guid: 498c66bffaea41f4aa7ca20f54ab5c6c, type: 3}
-  enemy: {fileID: 2927740274511036961, guid: ed1340990553ac64ab895065034672ef, type: 3}
+  _bonus: {fileID: 7830413327721230530, guid: 097824de953fe2141863b57ba7eaef72, type: 3}
+  _life: {fileID: 8507936732257313156, guid: b3b14d0a6f5f831439f85659706db3b9, type: 3}
+  _shield: {fileID: 7362780276147569825, guid: 498c66bffaea41f4aa7ca20f54ab5c6c, type: 3}
+  _enemy: {fileID: 2927740274511036961, guid: ed1340990553ac64ab895065034672ef, type: 3}
   "interval\u0421reationBonus": 2.1
   "interval\u0421reationLife": 5.3
   "interval\u0421reationShield": 11.4
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfc93bae55e5eb47927636e2d6b0540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _effect: {fileID: 8422609248598337081, guid: 6b076acb6aa31e44bb2877c6be26c9ae, type: 3}
+  Effect: {fileID: 8422609248598337081, guid: 6b076acb6aa31e44bb2877c6be26c9ae, type: 3}
 --- !u!1 &760816724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfc93bae55e5eb47927636e2d6b0540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _effect: {fileID: 8422609248598337081, guid: 6b076acb6aa31e44bb2877c6be26c9ae, type: 3}
+  Effect: {fileID: 8422609248598337081, guid: 6b076acb6aa31e44bb2877c6be26c9ae, type: 3}
 --- !u!1 &1651200864
 GameObject:
   m_ObjectHideFlags: 0
