@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScore : ScoringClash
 {
+    [SerializeField] private GameObject _buttonRestart;
     public override void PointsManager(string tag)
     {
         if (tag.Equals("BonusTag"))
@@ -31,6 +32,7 @@ public class PlayerScore : ScoringClash
                 if (Life <= -1)
                 {
                     KillPlayer();
+                    _buttonRestart.SetActive(true);
                 }
             }
         }
