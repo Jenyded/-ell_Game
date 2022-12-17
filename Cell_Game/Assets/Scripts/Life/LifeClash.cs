@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ScoringClash : EffectCollision
+public abstract class LifeClash : EffectCollision
 {
-    protected int Score;       
-   
-    public abstract void PointsManager(string tag);   
+    protected int Life = 5;
+
+    public abstract void LifeManager(string tag);
+    public abstract void KillPlayer();
 
 
     private void Start()
@@ -16,11 +17,11 @@ public abstract class ScoringClash : EffectCollision
 
     public void ClashCollision(string tag)
     {
-        PointsManager(tag);        
+        LifeManager(tag);
     }
 
     private void OnDestroy()
     {
         Collision -= ClashCollision;
-    }   
+    }
 }

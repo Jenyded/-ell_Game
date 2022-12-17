@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Shield : PlayerScore
+public class Shield : EffectCollision
 {
     private Material _materialBlink;
     private Material _materialDefault;
@@ -9,7 +9,10 @@ public class Shield : PlayerScore
     public GameObject shieldObj;
     public ShieldTimer shieldTimer;
     public static bool shieldActivity = false;
-    
+
+    private int _life;
+    private PlayerLife playerLife;
+
     private void Start()
     {
         _spriteRend = GetComponent<SpriteRenderer>();
@@ -19,6 +22,7 @@ public class Shield : PlayerScore
 
     private void Update()
     {
+        _life = playerLife.GetLife();
         if (shieldTimer.isCoolDown == false)
         {
             shieldActivity = false;
@@ -34,7 +38,7 @@ public class Shield : PlayerScore
                 _spriteRend.material = _materialBlink;
             }
 
-            if (Life >= 0)
+            if (_life >= 0)
             {
                 Invoke("ResetMaterial", 0.2f);
             }            
