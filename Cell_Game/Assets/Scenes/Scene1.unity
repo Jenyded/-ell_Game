@@ -135,12 +135,12 @@ GameObject:
   - component: {fileID: 6881311}
   - component: {fileID: 6881315}
   - component: {fileID: 6881316}
+  - component: {fileID: 6881321}
   - component: {fileID: 6881318}
-  - component: {fileID: 6881319}
   - component: {fileID: 6881320}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: PlayerTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,20 +273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309aa41f7e7a23147b0abf200db5767a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6881319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6881310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca174233241ab7742bd0b7d6259e8cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shieldObj: {fileID: 2038436459}
-  shieldTimer: {fileID: 2048503482}
 --- !u!114 &6881320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,12 +280,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6881310}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e5a5cb25475f8747bfd67171211e61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttonRestart: {fileID: 283995417}
+--- !u!114 &6881321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d218859b48dfba64e8fef068d47d3ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shildTimer: {fileID: 2048503482}
+  shielSpheredObj: {fileID: 2038436459}
 --- !u!1 &38603122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,7 +1286,7 @@ MonoBehaviour:
   _enemy: {fileID: 2927740274511036961, guid: ed1340990553ac64ab895065034672ef, type: 3}
   _intervalCreationBonus: 1.8
   _intervalCreationLife: 4.1
-  _intervalCreationShield: 21.2
+  _intervalCreationShield: 11.2
   _intervalCreationEnemy: 1
 --- !u!1 &538007918
 GameObject:
@@ -2244,7 +2243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _score: {fileID: 1230719434}
-  _playerScore: {fileID: 6881318}
 --- !u!1 &1233651305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,9 +2889,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63c2062f75bfc748952281b8cf4e178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttonStart: {fileID: 0}
-  _buttonExit: {fileID: 0}
-  _buttonSound: {fileID: 0}
   _buttonRestart: {fileID: 283995417}
   _buttonExitToMenu: {fileID: 876220686}
 --- !u!4 &1617499174
@@ -3280,7 +3275,7 @@ GameObject:
   - component: {fileID: 2038436460}
   - component: {fileID: 2038436461}
   m_Layer: 0
-  m_Name: Shield
+  m_Name: ShieldSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3594,4 +3589,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: {fileID: 2139053116}
-  _playerLife: {fileID: 6881320}

@@ -396,8 +396,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.6784314, g: 0.78039217, b: 0.98039216, a: 1}
+    m_PressedColor: {r: 0.36078432, g: 0.49803922, b: 0.77254903, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -419,7 +419,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1493407708}
-        m_TargetAssemblyTypeName: FunctionsButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
@@ -779,8 +779,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.6784314, g: 0.78039217, b: 0.98039216, a: 1}
+    m_PressedColor: {r: 0.36078432, g: 0.49803922, b: 0.77254903, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1107,14 +1107,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1493407706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a63c2062f75bfc748952281b8cf4e178, type: 3}
+  m_Script: {fileID: 11500000, guid: a2a080e7de0f55e43be20f2400025f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonStart: {fileID: 2087199176}
   _buttonExit: {fileID: 291529624}
   _buttonSound: {fileID: 517728453}
-  _buttonRestart: {fileID: 0}
-  _buttonExitToMenu: {fileID: 0}
 --- !u!1 &1862510267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,8 +1222,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.6784314, g: 0.78039217, b: 0.98039216, a: 1}
+    m_PressedColor: {r: 0.36078432, g: 0.49803922, b: 0.77254903, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1247,7 +1245,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1493407708}
-        m_TargetAssemblyTypeName: FunctionsButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:

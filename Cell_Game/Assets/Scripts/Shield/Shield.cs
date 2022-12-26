@@ -1,17 +1,15 @@
 using UnityEngine;
 
-public class Shield : EffectCollision
+public class Shield : ShieldClash  //PlayerLife 
 {
     private Material _materialBlink;
     private Material _materialDefault;
     private SpriteRenderer _spriteRend;
 
-    public GameObject shieldObj;
-    public ShieldTimer shieldTimer;
+    
+    //public ShieldTimer shieldTimer;
     public static bool shieldActivity = false;
-
-    private int _life;
-    private PlayerLife playerLife;
+        
 
     private void Start()
     {
@@ -21,36 +19,37 @@ public class Shield : EffectCollision
     }
 
     private void Update()
-    {
-        _life = playerLife.GetLife();
-        if (shieldTimer.isCoolDown == false)
+    {       
+        if (Player.Instance.GetShieldTimer().isCoolDown == false)
         {
             shieldActivity = false;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+   public override void ShieldCollisionWithObjects(string tag)
+    //private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("EnemyTag"))
+        if (tag.Equals("PlayerTag"))
+        // if (collision.CompareTag("EnemyTag"))
         {
             if (shieldActivity == false)
             {
                 _spriteRend.material = _materialBlink;
             }
 
-            if (_life >= 0)
+            if (Player.Life >= 0)
             {
                 Invoke("ResetMaterial", 0.2f);
             }            
         }
-
-        if (collision.CompareTag("ShieldTag"))
+        if (tag.Equals("ShieldTag"))
+        //if (collision.CompareTag("ShieldTag"))
         {
             shieldActivity = true;
-            shieldObj.SetActive(true);
-            shieldTimer.gameObject.SetActive(true);
-            shieldTimer.isCoolDown = true;
-            Destroy(collision.gameObject);
+            Player.Instance.SetViewShield(true);
+            Player.Instance.GetShieldTimer().gameObject.SetActive(true);
+            Player.Instance.GetShieldTimer().isCoolDown = true;
+            Destroy(gameObject);
         }
     }
 

@@ -4,10 +4,15 @@ using UnityEngine;
 public class UILife : MonoBehaviour
 {
     [SerializeField] TMP_Text _life;
-    [SerializeField] PlayerLife _playerLife;
+    //[SerializeField] PlayerLife _playerLife;
 
     private void Update()
     {
-        _life.text = _playerLife.GetLife().ToString();
+        if(Player.Life >= 0)
+        {
+            _life.text = Player.Life.ToString();
+        }        
+            
+            //_playerLife.GetLife().ToString();
     }
 }

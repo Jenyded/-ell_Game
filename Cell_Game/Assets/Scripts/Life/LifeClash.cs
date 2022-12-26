@@ -4,10 +4,10 @@ using UnityEngine;
 
 public abstract class LifeClash : EffectCollision
 {
-    protected int Life = 5;
+    //protected int Life = 5;
 
     public abstract void LifeManager(string tag);
-    public abstract void KillPlayer();
+    // public abstract void KillPlayer();
 
 
     private void Start()

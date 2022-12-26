@@ -8,9 +8,12 @@ public class MovePlayer : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.x = mousePos.x > _rightSide ? _rightSide : mousePos.x;
-        mousePos.x = mousePos.x < _lefStide ? _lefStide : mousePos.x;
-        player.position = new Vector2(mousePos.x, player.position.y);
+        if(Player.Life >= 0)
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.x = mousePos.x > _rightSide ? _rightSide : mousePos.x;
+            mousePos.x = mousePos.x < _lefStide ? _lefStide : mousePos.x;
+            player.position = new Vector2(mousePos.x, player.position.y);
+        }        
     }
 }

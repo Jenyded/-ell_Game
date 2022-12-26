@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ScoringClash : EffectCollision
 {
-    protected int Score;       
+    // protected int Score;       
    
     public abstract void PointsManager(string tag);   
 

@@ -7,6 +7,7 @@ public class FallingObjects : MonoBehaviour
     
     void Update()
     {
+       
         transform.position -= new Vector3(_fallSpeed_x, _fallSpeed_y * Time.deltaTime);
     }    
 }

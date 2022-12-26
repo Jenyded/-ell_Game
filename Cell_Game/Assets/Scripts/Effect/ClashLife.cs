@@ -4,7 +4,7 @@ public class ClashLife : Clash
 {
     public override void ClashCollisionWithObject(string tag)
     {
-        if (tag.Equals("Player"))
+        if (tag.Equals("PlayerTag"))
         {
             EnableEffect();
             base.BaseDestroy();

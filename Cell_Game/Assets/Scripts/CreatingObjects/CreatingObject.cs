@@ -24,33 +24,34 @@ public class CreatingObject : MonoBehaviour
 
     void Update()
     {
-        _timeBonus += Time.deltaTime;
-        if (_timeBonus >= _intervalCreationBonus)
-        {
-            TimeCreation(_bonus);
-            _timeBonus = 0;
-        }
+            _timeBonus += Time.deltaTime;
+            if (_timeBonus >= _intervalCreationBonus)
+            {
+                TimeCreation(_bonus);
+                _timeBonus = 0;
+            }
 
-        _timeLife += Time.deltaTime;
-        if (_timeLife >= _intervalCreationLife)
-        {
-            TimeCreation(_life);
-            _timeLife = 0;
-        }
+            _timeLife += Time.deltaTime;
+            if (_timeLife >= _intervalCreationLife)
+            {
+                TimeCreation(_life);
+                _timeLife = 0;
+            }
 
-        _timeShield += Time.deltaTime;
-        if (_timeShield >= _intervalCreationShield)
-        {
-            TimeCreation(_shield);
-            _timeShield = 0;
-        }
+            _timeShield += Time.deltaTime;
+            if (_timeShield >= _intervalCreationShield)
+            {
+                TimeCreation(_shield);
+                _timeShield = 0;
+            }
 
-        _timeEnemy += Time.deltaTime;
-        if (_timeEnemy >= _intervalCreationEnemy)
-        {
-            TimeCreation(_enemy);
-            _timeEnemy = 0;
-        }        
+            _timeEnemy += Time.deltaTime;
+            if (_timeEnemy >= _intervalCreationEnemy)
+            {
+                TimeCreation(_enemy);
+                _timeEnemy = 0;
+            }
+                           
     }    
 
     private void TimeCreation(GameObject obg)
