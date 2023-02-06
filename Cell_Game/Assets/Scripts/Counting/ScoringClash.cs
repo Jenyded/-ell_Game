@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class ScoringClash : EffectCollision
-{
-    // protected int Score;       
-   
+{      
     public abstract void PointsManager(string tag);   
-
 
     private void Start()
     {

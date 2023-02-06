@@ -8,26 +8,16 @@ public class LifeSubtraction : LifeClash
     {
         if (tag.Equals("PlayerTag"))
         {
-            if (Shield.shieldActivity != true)
+            if (Shield.ShieldActivity != true)
             {
                 Player.Life--;
 
                 if (Player.Life <= -1)
                 {
-                    //Player.KillPlayer();
-
-                    FunctionsButton.instance.RestartToButton();
-
-                    //if (Player.Life <= 0)
-                    //{
-                    //    Player.Life = 0;
-                    //}
+                    Player.Instance.gameObject.SetActive(false);
+                    FunctionsButton.instance.RestartToButton();                    
                 }
             }
         }
-    }
-    //public void KillPlayer()
-    //{
-    //    Destroy(gameObject);
-    //}
+    }    
 }

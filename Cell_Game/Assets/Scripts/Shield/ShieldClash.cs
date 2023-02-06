@@ -6,7 +6,6 @@ public abstract class ShieldClash : EffectCollision
 {
     public abstract void ShieldCollisionWithObjects(string tag);
 
-
     private void Start()
     {
         Collision += ClashCollision;

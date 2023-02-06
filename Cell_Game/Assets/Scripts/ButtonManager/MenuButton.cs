@@ -19,5 +19,4 @@ public class MenuButton : MonoBehaviour
         Debug.Log("Игра закрылась");
         Application.Quit();
     }
-
 }

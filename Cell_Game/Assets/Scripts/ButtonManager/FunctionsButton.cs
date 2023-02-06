@@ -3,17 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class FunctionsButton : MonoBehaviour
 {
-    // public GameObject _buttonRestart;
     [SerializeField] private GameObject _buttonRestart;
     [SerializeField] private GameObject _buttonExitToMenu;
 
     public static FunctionsButton instance;
 
-
     private void Awake()
     {
         instance = this;
     }
+
     public void RestartLevel()
     {
         SceneManager.LoadScene("Scene1");

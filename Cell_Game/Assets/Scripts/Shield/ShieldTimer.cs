@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ShieldTimer : MonoBehaviour
 {
-    public float coolDown;
+    public float CoolDown;
     [HideInInspector] public bool isCoolDown;   
 
     private Image _shieldImage;
@@ -20,7 +20,7 @@ public class ShieldTimer : MonoBehaviour
     {
         if (isCoolDown)
         {
-            _shieldImage.fillAmount -= 1 / coolDown * Time.deltaTime;
+            _shieldImage.fillAmount -= 1 / CoolDown * Time.deltaTime;
             
             if(_shieldImage.fillAmount <= 0)
             {
