@@ -4,11 +4,12 @@ using UnityEngine.UI;
 public class ShieldTimer : MonoBehaviour
 {
     public float CoolDown;
-    [HideInInspector] public bool isCoolDown;   
+    [HideInInspector] public bool isCoolDown;
+    private float TimerUnit = 1f;
 
     private Image _shieldImage;
     private Shield _playerShield;
-    
+
     private void Start()
     {
         _shieldImage = GetComponent<Image>();
@@ -20,20 +21,20 @@ public class ShieldTimer : MonoBehaviour
     {
         if (isCoolDown)
         {
-            _shieldImage.fillAmount -= 1 / CoolDown * Time.deltaTime;
-            
-            if(_shieldImage.fillAmount <= 0)
+            _shieldImage.fillAmount -= TimerUnit / CoolDown * Time.deltaTime;
+
+            if (_shieldImage.fillAmount <= 0)
             {
-                _shieldImage.fillAmount = 1;
+                _shieldImage.fillAmount = TimerUnit;
                 isCoolDown = false;
                 Player.Instance.SetViewShield(false);
-                gameObject.SetActive(false);                 
+                gameObject.SetActive(false);
             }
-        } 
+        }
     }
 
     public void ResetTimer()
     {
-        _shieldImage.fillAmount = 1;
+        _shieldImage.fillAmount = TimerUnit;
     }
 }

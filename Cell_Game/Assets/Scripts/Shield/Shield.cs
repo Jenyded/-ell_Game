@@ -1,11 +1,7 @@
 using UnityEngine;
 
-public class Shield : MonoBehaviour //ShieldClash
+public class Shield : ShieldClash 
 {
-    private Material _materialBlink;
-    private Material _materialDefault;
-    private SpriteRenderer _spriteRend;
-    private float _materialOnTime = 0.2f;
     public static bool ShieldActivity = false;
 
     private void Update()
@@ -15,34 +11,10 @@ public class Shield : MonoBehaviour //ShieldClash
             ShieldActivity = false;
         }
     }
-
-    private void Start()
-    {
-        _spriteRend = GetComponent<SpriteRenderer>();
-        _materialBlink = Resources.Load("PlayerBlink", typeof(Material)) as Material;
-        _materialDefault = _spriteRend.material;
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    // public override void ShieldCollisionWithObjects(string tag)
-    {
-        if (collision.CompareTag("PlayerTag"))
-        // if (tag.Equals("PlayerTag"))        
-        {
-            if (ShieldActivity == false)
-            {
-                _spriteRend.material = _materialBlink;
-            }
-
-            if (Player.Life >= 0)
-            {
-                Invoke("ResetMaterial", _materialOnTime);
-            }
-        }
-
-        if (collision.CompareTag("PlayerTag"))
-        //if (tag.Equals("ShieldTag"))        
+    
+    public override void ShieldCollisionWithObjects(string tag)
+    { 
+        if (tag.Equals("PlayerTag"))        
         {
             ShieldActivity = true;
             Player.Instance.SetViewShield(true);
@@ -50,10 +22,5 @@ public class Shield : MonoBehaviour //ShieldClash
             Player.Instance.GetShieldTimer().isCoolDown = true;
             Destroy(gameObject);
         }
-    }
-
-    void ResetMaterial()
-    {
-        _spriteRend.material = _materialDefault;
-    }
+    }   
 }

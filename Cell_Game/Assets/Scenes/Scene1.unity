@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 6881315}
   - component: {fileID: 6881316}
   - component: {fileID: 6881321}
+  - component: {fileID: 6881322}
   m_Layer: 0
   m_Name: Player
   m_TagString: PlayerTag
@@ -273,6 +274,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shildTimer: {fileID: 2048503482}
   shielSpheredObj: {fileID: 2038436459}
+--- !u!114 &6881322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d709ff0a48643be92b7eeda0e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &38603122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,7 +3425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f61c1b92f2f608449d19e0ea0067a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDown: 0
+  CoolDown: 10
   isCoolDown: 0
 --- !u!1 &2139053114
 GameObject:
