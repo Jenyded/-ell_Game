@@ -15,7 +15,7 @@ public class LifeSubtraction : LifeClash
                 if (Player.Life <= -1)
                 {
                     Player.Instance.gameObject.SetActive(false);
-                    FunctionsButton.instance.RestartToButton();                    
+                    FunctionsButton.Instance.RestartToButton();                    
                 }
             }
         }

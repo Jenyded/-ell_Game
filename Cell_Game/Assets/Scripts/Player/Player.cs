@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public static int Life = 5;
     public static int Score;
+    public static int HighScoreCounter;
     public static int Bonus;
     public static bool Shield;
     public static Player Instance;
