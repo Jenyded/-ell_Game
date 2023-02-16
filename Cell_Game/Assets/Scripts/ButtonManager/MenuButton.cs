@@ -20,4 +20,9 @@ public class MenuButton : MonoBehaviour
         Debug.Log("Игра закрылась");
         Application.Quit();
     }
+
+    public void Sound()
+    {
+        AudioManager.SoundPause();
+    }
 }

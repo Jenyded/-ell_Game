@@ -7,12 +7,14 @@ public class ClashEnemy : Clash
         if (tag.Equals("PlayerTag"))
         {
             EnableEffect();
+            AudioManager.instance.Play("Sound_Panel");
             base.BaseDestroy();
         }
 
         if (tag.Equals("Finish_panelTag"))
         {
             EnableEffect();
+            AudioManager.instance.Play("Sound_Panel");
             base.BaseDestroy();
         }
     }

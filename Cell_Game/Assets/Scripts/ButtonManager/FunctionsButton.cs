@@ -14,7 +14,7 @@ public class FunctionsButton : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (PauseGame)
-                Resume();
+                Continue();
             else
                 Pause();
         }
@@ -33,7 +33,7 @@ public class FunctionsButton : MonoBehaviour
         _buttonRestart.SetActive(true);
     }
 
-    public void Resume()
+    public void Continue()
     {
         _pauseGameMenu.SetActive(false);
         Time.timeScale = 1f;
@@ -45,6 +45,7 @@ public class FunctionsButton : MonoBehaviour
         _pauseGameMenu.SetActive(true);
         Time.timeScale = 0;
         PauseGame = true;
+        //AudioManager.SoundPause();
     }
 
     public void LosdMenu()

@@ -7,6 +7,7 @@ public class ClashLife : Clash
         if (tag.Equals("PlayerTag"))
         {
             EnableEffect();
+            AudioManager.instance.Play("Sound_Life");
             base.BaseDestroy();
         }
     }

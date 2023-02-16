@@ -6,6 +6,7 @@ public class ClashWall : Clash
     {
         if (tag.Equals("PlayerTag"))
         {
+            AudioManager.instance.Play("Sound_HitWall");
             EnableEffect();
         }
     }
