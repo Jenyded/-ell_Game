@@ -16,11 +16,14 @@ public class Shield : ShieldClash
     { 
         if (tag.Equals("PlayerTag"))        
         {
-            AudioManager.instance.Play("Sound_Shild");
             ShieldActivity = true;
             Player.Instance.SetViewShield(true);
             Player.Instance.GetShieldTimer().gameObject.SetActive(true);
             Player.Instance.GetShieldTimer().isCoolDown = true;
+            if (!AudioListener.pause)
+            {
+                AudioManager.instance.Play("Sound_Shild");
+            }
             Destroy(gameObject);
         }
     }   

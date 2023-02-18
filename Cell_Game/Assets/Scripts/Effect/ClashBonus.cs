@@ -7,7 +7,10 @@ public class ClashBonus : Clash
         if (tag.Equals("PlayerTag"))
         {
             EnableEffect();
-            AudioManager.instance.Play("Sound_Score");
+            if (!AudioListener.pause)
+            {
+                AudioManager.instance.Play("Sound_Score");
+            }
             base.BaseDestroy();
         }
     }

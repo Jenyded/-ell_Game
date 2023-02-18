@@ -18,7 +18,7 @@ public class FunctionsButton : MonoBehaviour
             else
                 Pause();
         }
-    }
+    }    
 
     public void RestartLevel()
     {
@@ -38,6 +38,7 @@ public class FunctionsButton : MonoBehaviour
         _pauseGameMenu.SetActive(false);
         Time.timeScale = 1f;
         PauseGame = false;
+        AudioManager.instance.Play("Background_Music");
     }
 
     public void Pause()
@@ -45,17 +46,17 @@ public class FunctionsButton : MonoBehaviour
         _pauseGameMenu.SetActive(true);
         Time.timeScale = 0;
         PauseGame = true;
-        //AudioManager.SoundPause();
-    }
+        AudioManager.instance.Stop("Background_Music");
+    }    
 
     public void LosdMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
-    }   
+    }
 
     public void ResetHighScore()
     {
         ScoreCounter.ResetHighScore();
-    }     
+    }
 }
