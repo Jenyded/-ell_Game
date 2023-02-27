@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class UIScore : MonoBehaviour
 {
-    [SerializeField] TMP_Text _score;
-    [SerializeField] TMP_Text _highScore;
+    [SerializeField] TMP_Text _scoreText;
+    [SerializeField] TMP_Text _highScoreText;
 
     private void Update()
     {
-        _score.text = Player.Score.ToString();
-        _highScore.text = Player.HighScoreCounter.ToString();
+        _scoreText.text = Player.Score.ToString();
+        _highScoreText.text = Player.HighScoreCounter.ToString();
     }
 }

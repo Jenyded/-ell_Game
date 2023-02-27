@@ -7,56 +7,61 @@ public class CreatingObject : MonoBehaviour
     [SerializeField] private GameObject _shield;
     [SerializeField] private GameObject _enemy;
 
-    private float _timeBonus;
-    private float _timeLife;
-    private float _timeShield;
-    private float _timeEnemy;
+    private float _countingTimeBonus;
+    private float _countingTimeLife;
+    private float _countingTimeShield;
+    private float _countingTimeEnemy;
 
     [SerializeField] private float _intervalCreationBonus;
     [SerializeField] private float _intervalCreationLife;
     [SerializeField] private float _intervalCreationShield;
     [SerializeField] private float _intervalCreationEnemy;
-    
-    private float _leftSide = -1.96f;
-    private float _rightSide = 1.49f;
-    private float _heightInstance = 7.5f;
-    private float _timeDestroy = 5f;
 
-    void Update()
+    private readonly float _creationPosXLeft = -1.96f;
+    private readonly float _creationPosXright = 1.49f;
+    private readonly float _creationPosY = 7.5f;
+    private readonly float _timeDestroy = 5f;
+
+    private void Update()
     {
-            _timeBonus += Time.deltaTime;
-            if (_timeBonus >= _intervalCreationBonus)
-            {
-                TimeCreation(_bonus);
-                _timeBonus = 0;
-            }
+        _countingTimeBonus += Time.deltaTime;
+        if (_countingTimeBonus >= _intervalCreationBonus)
+        {
+            TimeCreation(_bonus, 3);
+            _countingTimeBonus = 0;
+        }
 
-            _timeLife += Time.deltaTime;
-            if (_timeLife >= _intervalCreationLife)
-            {
-                TimeCreation(_life);
-                _timeLife = 0;
-            }
+        _countingTimeLife += Time.deltaTime;
+        if (_countingTimeLife >= _intervalCreationLife)
+        {
+            TimeCreation(_life, 3);
+            _countingTimeLife = 0;
+        }
 
-            _timeShield += Time.deltaTime;
-            if (_timeShield >= _intervalCreationShield)
-            {
-                TimeCreation(_shield);
-                _timeShield = 0;
-            }
+        _countingTimeShield += Time.deltaTime;
+        if (_countingTimeShield >= _intervalCreationShield)
+        {
+            TimeCreation(_shield, 3);
+            _countingTimeShield = 0;
+        }
 
-            _timeEnemy += Time.deltaTime;
-            if (_timeEnemy >= _intervalCreationEnemy)
-            {
-                TimeCreation(_enemy);
-                _timeEnemy = 0;
-            }
-                           
-    }    
+        _countingTimeEnemy += Time.deltaTime;
+        if (_countingTimeEnemy >= _intervalCreationEnemy)
+        {
+            TimeCreation(_enemy, 3);
+            _countingTimeEnemy = 0;
+        }
 
-    private void TimeCreation(GameObject obg)
+    }
+
+    private void TimeCreation(GameObject obg, float speed)
     {
-        GameObject copy = Instantiate(obg, new Vector2(Random.Range(_leftSide, _rightSide), _heightInstance), Quaternion.identity);
+        GameObject copy = Instantiate(obg, new Vector2(Random.Range(_creationPosXLeft, _creationPosXright), _creationPosY), Quaternion.identity);
+        var falingObg = copy.GetComponent<FallingObjects>();
+        if (falingObg != null)
+        {
+            falingObg.Init(speed);
+        }
         Destroy(copy, _timeDestroy);
     }
 }

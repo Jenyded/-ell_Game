@@ -30,7 +30,7 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-    void ResetMaterial()
+    private void ResetMaterial()
     {
         _spriteRend.material = _materialDefault;
     }
