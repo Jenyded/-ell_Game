@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1555370051278336800}
   - component: {fileID: 7397011052398187506}
   - component: {fileID: 5385625940379983046}
+  - component: {fileID: -2398592907710592005}
+  - component: {fileID: -5975054339727255160}
   m_Layer: 0
   m_Name: LevelKey
   m_TagString: LevelKeyTeg
@@ -133,3 +135,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2398592907710592005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757256153882585192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce8ec75ba6ff9148830fdb3c9619163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5975054339727255160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757256153882585192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0399f0c89d1a03d43aa2a9adeeaea016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: {fileID: 0}

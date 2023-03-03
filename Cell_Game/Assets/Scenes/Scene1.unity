@@ -448,6 +448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 249813290}
+  - component: {fileID: 249813291}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -470,6 +471,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &249813291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249813289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91bfb9a885446b4a89125868d89eb67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreatingOb: {fileID: 519420041}
 --- !u!1 &261143911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,10 +1465,7 @@ MonoBehaviour:
   _life: {fileID: 8507936732257313156, guid: b3b14d0a6f5f831439f85659706db3b9, type: 3}
   _shield: {fileID: 7362780276147569825, guid: 498c66bffaea41f4aa7ca20f54ab5c6c, type: 3}
   _enemy: {fileID: 2927740274511036961, guid: ed1340990553ac64ab895065034672ef, type: 3}
-  _intervalCreationBonus: 1.8
-  _intervalCreationLife: 6
-  _intervalCreationShield: 12
-  _intervalCreationEnemy: 1
+  _levelKey: {fileID: 3757256153882585192, guid: f98e9178669f8504b9ad691526544679, type: 3}
 --- !u!1 &538007918
 GameObject:
   m_ObjectHideFlags: 0

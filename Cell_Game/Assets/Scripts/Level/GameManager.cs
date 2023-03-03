@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [SerializeField] private CreatingObject CreatingOb;
+
     private void Awake()
     {
         if (Instance == null)
@@ -20,11 +22,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
-    }
-
-    private void Update()
-    {
-
-    }
+        LevelsData.Init();
+        CreatingOb.Init(LevelsData.Levels[0]);
+    }    
 }

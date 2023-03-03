@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelsData : MonoBehaviour
+public class LevelsData 
 {
     public static readonly List<LevelData> Levels = new();
 
-    public void Init()
+    public static void Init()
     {
         var level1 = new LevelData
         {
@@ -25,12 +25,32 @@ public class LevelsData : MonoBehaviour
 
         var level2 = new LevelData
         {
+            IntervalCreationBonus = 3.2f,
+            IntervalCreationLife = 7f,
+            IntervalCreationShield = 12f,
+            IntervalCreationEnemy = 2f,
+            IntervalCreationLevelKey = 20f,
 
+            FallSpeedBonus = 3,
+            FallSpeedLife = 3,
+            FallSpeedShield = 3,
+            FallSpeedEnemy = 2,
+            FallSpeedLevelKey = 3
         };
 
         var level3 = new LevelData
         {
+            IntervalCreationBonus = 3.2f,
+            IntervalCreationLife = 7f,
+            IntervalCreationShield = 12f,
+            IntervalCreationEnemy = 2f,
+            IntervalCreationLevelKey = 20f,
 
+            FallSpeedBonus = 3,
+            FallSpeedLife = 3,
+            FallSpeedShield = 3,
+            FallSpeedEnemy = 2,
+            FallSpeedLevelKey = 3
         };
 
         Levels.Add(level1);
