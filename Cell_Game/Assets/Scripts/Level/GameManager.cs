@@ -5,9 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
-    [SerializeField] private CreatingObject CreatingOb;
-
+         
+    [SerializeField] private CreatingObject CreatingObject;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -19,10 +19,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     private void Start()
     {
         LevelsData.Init();
-        CreatingOb.Init(LevelsData.Levels[0]);
+        CreatingObject.Init();
     }    
 }

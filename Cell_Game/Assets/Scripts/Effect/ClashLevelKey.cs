@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ClashLevelKey : Clash
-
-
 {
     public override void ClashCollisionWithObject(string tag)
     {
         if (tag.Equals("PlayerTag"))
         {
-            //EnableEffect();
-            //if (!AudioListener.pause)
-            //{
-            //    AudioManager.instance.Play("Sound_Life");
-            //}
-            //LevelsData.Levels[0];
+            EnableEffect();
+            if (!AudioListener.pause)
+            {
+                AudioManager.instance.Play("Sound_Level");
+            }
             base.BaseDestroy();
+            //LevelsData.SwitchLevel();
+            FunctionsButton.Instance.SetActiveButtonSwitchLevel();
         }
     }
 

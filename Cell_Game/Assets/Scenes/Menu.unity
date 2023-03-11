@@ -1125,6 +1125,12 @@ MonoBehaviour:
     pitch: 0.6
     loop: 0
     source: {fileID: 0}
+  - name: Sound_Level
+    clip: {fileID: 8300000, guid: 6314b981da9ad614191b38c140329f8d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &1266210042
 MonoBehaviour:
   m_ObjectHideFlags: 0

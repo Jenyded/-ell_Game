@@ -3,10 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class FunctionsButton : MonoBehaviour
 {
-    [SerializeField] private GameObject _buttonRestart;
-    [SerializeField] private GameObject _pauseGameMenu;
     public bool PauseGame;
     public static FunctionsButton Instance;
+    [SerializeField] private GameObject _buttonPauseGameMenu;
+    [SerializeField] private GameObject _buttonRestart;
+    [SerializeField] private GameObject _buttonSwitchLevel;
 
     private void Awake()
     {
@@ -18,7 +19,12 @@ public class FunctionsButton : MonoBehaviour
             else
                 Pause();
         }
-    }    
+    } 
+    
+    public void SetActiveButtonRestart()
+    {
+        _buttonRestart.SetActive(true);
+    }
 
     public void RestartLevel()
     {
@@ -28,26 +34,25 @@ public class FunctionsButton : MonoBehaviour
         Player.Shield = false;
     }
 
-    public void RestartToButton()
+    public void Pause()
     {
-        _buttonRestart.SetActive(true);
-    }
-
+        _buttonPauseGameMenu.SetActive(true);
+        Time.timeScale = 0;
+        PauseGame = true;
+        AudioManager.instance.Stop("Background_Music");
+    }  
+    
     public void Continue()
     {
-        _pauseGameMenu.SetActive(false);
+        _buttonPauseGameMenu.SetActive(false);
         Time.timeScale = 1f;
         PauseGame = false;
         AudioManager.instance.Play("Background_Music");
     }
-
-    public void Pause()
+    public void ResetHighScore()
     {
-        _pauseGameMenu.SetActive(true);
-        Time.timeScale = 0;
-        PauseGame = true;
-        AudioManager.instance.Stop("Background_Music");
-    }    
+        ScoreCounter.ResetHighScore();
+    }
 
     public void LosdMenu()
     {
@@ -55,8 +60,19 @@ public class FunctionsButton : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void ResetHighScore()
+    public void SetActiveButtonSwitchLevel()
     {
-        ScoreCounter.ResetHighScore();
+        _buttonSwitchLevel.SetActive(true);
+        Time.timeScale = 0;
+        PauseGame = true;
+        UIButton.Instance.ReflectLevel();
+    }
+
+    public void SwitchLevel()
+    {
+        SceneManager.LoadScene("Scene1");
+        LevelsData.SwitchLevel();
+        Time.timeScale = 1f;
+        PauseGame = false;
     }
 }

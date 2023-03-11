@@ -20,8 +20,18 @@ public class CreatingObject : MonoBehaviour
     private readonly float _timeDestroy = 5f;
 
     private LevelData _levelData;
-
     private bool _isNeedUpdate = false;
+
+    public void Init()
+    {
+        _isNeedUpdate = true;
+    }
+
+    //public void Init(LevelData levelData)
+    //{
+    //    _levelData = levelData;
+    //    _isNeedUpdate = true;
+    //}
 
     private void Update()
     {
@@ -30,38 +40,40 @@ public class CreatingObject : MonoBehaviour
             return;
         }
 
+        _levelData = LevelsData.GetCurrentLevel();
+
         _countingTimeBonus += Time.deltaTime;
         if (_countingTimeBonus >= _levelData.IntervalCreationBonus)
         {
-            TimeCreation(_bonus, LevelsData.Levels[0].FallSpeedBonus);
+            TimeCreation(_bonus, _levelData.FallSpeedBonus);
             _countingTimeBonus = 0;
         }
 
         _countingTimeLife += Time.deltaTime;
         if (_countingTimeLife >= _levelData.IntervalCreationLife)
         {
-            TimeCreation(_life, LevelsData.Levels[0].FallSpeedLife);
+            TimeCreation(_life, _levelData.FallSpeedLife);
             _countingTimeLife = 0;
         }
 
         _countingTimeShield += Time.deltaTime;
         if (_countingTimeShield >= _levelData.IntervalCreationShield)
         {
-            TimeCreation(_shield, LevelsData.Levels[0].FallSpeedShield);
+            TimeCreation(_shield, _levelData.FallSpeedShield);
             _countingTimeShield = 0;
         }
 
         _countingTimeEnemy += Time.deltaTime;
         if (_countingTimeEnemy >= _levelData.IntervalCreationEnemy)
         {
-            TimeCreation(_enemy, LevelsData.Levels[0].FallSpeedEnemy);
+            TimeCreation(_enemy, _levelData.FallSpeedEnemy);
             _countingTimeEnemy = 0;
         }
 
         _countingLevelKey += Time.deltaTime;
         if (_countingLevelKey >= _levelData.IntervalCreationLevelKey)
         {
-            TimeCreation(_levelKey, LevelsData.Levels[0].FallSpeedLevelKey);
+            TimeCreation(_levelKey, _levelData.FallSpeedLevelKey);
             _countingLevelKey = 0;
         }
     }
@@ -69,17 +81,11 @@ public class CreatingObject : MonoBehaviour
     private void TimeCreation(GameObject obg, float speed)
     {
         GameObject copy = Instantiate(obg, new Vector2(Random.Range(_creationPosXLeft, _creationPosXright), _creationPosY), Quaternion.identity);
-        var falingObg = copy.GetComponent<FallingObjects>();
-        if (falingObg != null)
+        var falingObj = copy.GetComponent<FallingObjects>();
+        if (falingObj != null)
         {
-            falingObg.Init(speed);
+            falingObj.Init(speed);
         }
         Destroy(copy, _timeDestroy);
-    }
-
-    public void Init(LevelData levelData)
-    {
-        _levelData = levelData;
-        _isNeedUpdate = true;
-    }
+    }    
 }
