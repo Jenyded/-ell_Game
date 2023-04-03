@@ -4,15 +4,14 @@ public class CreatingObject : MonoBehaviour
 {
     [SerializeField] private GameObject _bonus;
     [SerializeField] private GameObject _life;
-    [SerializeField] private GameObject _shield;
-    [SerializeField] private GameObject _enemy;
+    [SerializeField] private GameObject _shield;    
     [SerializeField] private GameObject _levelKey;
 
     private float _countingTimeBonus;
     private float _countingTimeLife;
     private float _countingTimeShield;
     private float _countingTimeEnemy;
-    private float _countingLevelKey;   
+    private float _countingLevelKey;
 
     private readonly float _creationPosXLeft = -1.96f;
     private readonly float _creationPosXright = 1.49f;
@@ -20,18 +19,13 @@ public class CreatingObject : MonoBehaviour
     private readonly float _timeDestroy = 5f;
 
     private LevelData _levelData;
-    private bool _isNeedUpdate = false;
+    private bool _isNeedUpdate = false;    
 
-    public void Init()
+    public void Init(LevelData levelData)
     {
+        _levelData = levelData;
         _isNeedUpdate = true;
     }
-
-    //public void Init(LevelData levelData)
-    //{
-    //    _levelData = levelData;
-    //    _isNeedUpdate = true;
-    //}
 
     private void Update()
     {
@@ -66,8 +60,8 @@ public class CreatingObject : MonoBehaviour
         _countingTimeEnemy += Time.deltaTime;
         if (_countingTimeEnemy >= _levelData.IntervalCreationEnemy)
         {
-            TimeCreation(_enemy, _levelData.FallSpeedEnemy);
-            _countingTimeEnemy = 0;
+            TimeCreation(_levelData.EnemyObj, _levelData.FallSpeedEnemy);
+            _countingTimeEnemy = 0;            
         }
 
         _countingLevelKey += Time.deltaTime;

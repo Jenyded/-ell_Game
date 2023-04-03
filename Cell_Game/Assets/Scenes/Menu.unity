@@ -1027,7 +1027,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 20
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1131,6 +1131,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Sound_Victory
+    clip: {fileID: 8300000, guid: e832ac6db95dccc44a77759c0b4e30c5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &1266210042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1211,8 +1217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonStart: {fileID: 2087199176}
-  _buttonExit: {fileID: 291529624}
   _buttonSound: {fileID: 517728453}
+  _buttonExit: {fileID: 291529624}
 --- !u!1 &1862510267
 GameObject:
   m_ObjectHideFlags: 0

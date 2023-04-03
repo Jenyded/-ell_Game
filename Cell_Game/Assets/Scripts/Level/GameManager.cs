@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -23,6 +21,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         LevelsData.Init();
-        CreatingObject.Init();
+        CreatingObject.Init(LevelsData.Levels[0]);
     }    
 }

@@ -10,7 +10,7 @@ public class MovePlayer : MonoBehaviour
     {
         if(Player.Life >= 0)
         {
-            if (FunctionsButton.Instance.PauseGame == false)
+            if (FunctionsButton.Instance.IsPauseGame == false)
             {
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePos.x = mousePos.x > _rightSide ? _rightSide : mousePos.x;

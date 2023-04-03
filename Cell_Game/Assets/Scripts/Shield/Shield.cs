@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Shield : ShieldClash 
 {
-    public static bool ShieldActivity = false;
+    public static bool IsShieldActivity = false;
 
     private void Update()
     {
         if (Player.Instance.GetShieldTimer().isCoolDown == false)
         {
-            ShieldActivity = false;
+            IsShieldActivity = false;
         }
     }
     
@@ -16,7 +16,7 @@ public class Shield : ShieldClash
     { 
         if (tag.Equals("PlayerTag"))        
         {
-            ShieldActivity = true;
+            IsShieldActivity = true;
             Player.Instance.SetViewShield(true);
             Player.Instance.GetShieldTimer().gameObject.SetActive(true);
             Player.Instance.GetShieldTimer().isCoolDown = true;

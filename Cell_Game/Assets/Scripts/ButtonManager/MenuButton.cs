@@ -12,7 +12,7 @@ public class MenuButton : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Player.Life = 5;
         Player.Score = 0;
-        Player.Shield = false;
+        Player.IsShield = false;
     }
 
     public void Sound()

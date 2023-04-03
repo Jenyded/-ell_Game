@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelData 
 {
+    public GameObject EnemyObj;
+
     public float IntervalCreationBonus;
     public float IntervalCreationLife;
     public float IntervalCreationShield;

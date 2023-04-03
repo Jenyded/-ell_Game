@@ -18,7 +18,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.CompareTag("EnemyTag"))
         {
-            if (Shield.ShieldActivity == false)
+            if (Shield.IsShieldActivity == false)
             {
                 _spriteRend.material = _materialBlink;
             }

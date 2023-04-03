@@ -6,7 +6,7 @@ public class PointsSubtraction : ScoringClash
     {        
         if (tag.Equals("PlayerTag"))
         {
-            if (Shield.ShieldActivity != true)
+            if (Shield.IsShieldActivity != true)
             {
                 Player.Score -= 2;
 

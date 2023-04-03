@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     public static int Score;
     public static int HighScoreCounter;
     public static int Bonus;
-    public static bool Shield;
+    public static bool IsShield;    
     public static Player Instance;
     [SerializeField] ShieldTimer shildTimer;
     [SerializeField] GameObject shielSpheredObj;       

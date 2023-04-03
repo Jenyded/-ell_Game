@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class FunctionsButton : MonoBehaviour
 {
-    public bool PauseGame;
+    public bool IsPauseGame;
     public static FunctionsButton Instance;
     [SerializeField] private GameObject _buttonPauseGameMenu;
     [SerializeField] private GameObject _buttonRestart;
@@ -14,13 +14,13 @@ public class FunctionsButton : MonoBehaviour
         Instance = this;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (PauseGame)
+            if (IsPauseGame)
                 Continue();
             else
                 Pause();
         }
-    } 
-    
+    }
+
     public void SetActiveButtonRestart()
     {
         _buttonRestart.SetActive(true);
@@ -31,22 +31,22 @@ public class FunctionsButton : MonoBehaviour
         SceneManager.LoadScene("Scene1");
         Player.Life = 5;
         Player.Score = 0;
-        Player.Shield = false;
+        Player.IsShield = false;
     }
 
     public void Pause()
     {
         _buttonPauseGameMenu.SetActive(true);
         Time.timeScale = 0;
-        PauseGame = true;
+        IsPauseGame = true;
         AudioManager.instance.Stop("Background_Music");
-    }  
-    
+    }
+
     public void Continue()
     {
         _buttonPauseGameMenu.SetActive(false);
         Time.timeScale = 1f;
-        PauseGame = false;
+        IsPauseGame = false;
         AudioManager.instance.Play("Background_Music");
     }
     public void ResetHighScore()
@@ -62,17 +62,20 @@ public class FunctionsButton : MonoBehaviour
 
     public void SetActiveButtonSwitchLevel()
     {
-        _buttonSwitchLevel.SetActive(true);
+        AudioManager.instance.Stop("Background_Music");
+        _buttonSwitchLevel.SetActive(true);        
         Time.timeScale = 0;
-        PauseGame = true;
+        IsPauseGame = true;
         UIButton.Instance.ReflectLevel();
-    }
+        AudioManager.instance.Play("Sound_Victory");
+    }   
 
     public void SwitchLevel()
     {
         SceneManager.LoadScene("Scene1");
         LevelsData.SwitchLevel();
         Time.timeScale = 1f;
-        PauseGame = false;
+        IsPauseGame = false;       
+        AudioManager.instance.Play("Background_Music");
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ClashLevelKey : Clash
@@ -8,14 +6,14 @@ public class ClashLevelKey : Clash
     {
         if (tag.Equals("PlayerTag"))
         {
-            EnableEffect();
+            ClashEnemy.Instance.ExplosionEnemy();
+            EnableEffect();            
             if (!AudioListener.pause)
             {
                 AudioManager.instance.Play("Sound_Level");
             }
             base.BaseDestroy();
-            //LevelsData.SwitchLevel();
-            FunctionsButton.Instance.SetActiveButtonSwitchLevel();
+            FunctionsButton.Instance.Invoke("SetActiveButtonSwitchLevel", 1f);
         }
     }
 
