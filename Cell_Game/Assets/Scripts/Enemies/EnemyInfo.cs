@@ -15,7 +15,6 @@ public class EnemyInfo : ScriptableObject
             if (item.Id == id)
                 return item.Enemy;
         }
-
         return null;
     }
 
