@@ -8,7 +8,7 @@ public class LevelInfo : ScriptableObject
 {    
     [SerializeField] private List<DataLevel> _levels;
 
-    public GameObject GetLevel(string id)
+    public Texture GetLevel(string id)
     {
         foreach (var item in _levels)
         {
@@ -22,6 +22,6 @@ public class LevelInfo : ScriptableObject
     class DataLevel
     {
         public string Id;
-        public GameObject LevelBackground;
+        public Texture LevelBackground;
     }
 }

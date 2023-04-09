@@ -3,6 +3,7 @@ using UnityEngine;
 public class LevelData 
 {
     public GameObject EnemyObj;
+    public Texture LevelBackgroundGame;
 
     public float IntervalCreationBonus;
     public float IntervalCreationLife;
