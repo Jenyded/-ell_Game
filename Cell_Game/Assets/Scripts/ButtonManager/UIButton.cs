@@ -14,7 +14,7 @@ public class UIButton : MonoBehaviour
     
     public void ReflectLevel()
     {
-        _meaning = LevelsData.CurentLevel() + 1;
+        _meaning = LevelsData.GetCurentLevel() + 1;
         _textLevelButton.text = "Go to level " + _meaning.ToString();
     }
 }

@@ -73,7 +73,7 @@ public class FunctionsButton : MonoBehaviour
     public void SwitchLevel()
     {
         SceneManager.LoadScene("Scene1");
-        LevelsData.SwitchLevel();
+        GameManager.Instance.SwitchLevel();
         Time.timeScale = 1f;
         IsPauseGame = false;       
         AudioManager.instance.Play("Background_Music");

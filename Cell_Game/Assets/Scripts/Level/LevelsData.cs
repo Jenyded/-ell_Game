@@ -4,11 +4,22 @@ using UnityEngine;
 public class LevelsData
 {
     private static int _curentLevel = 0;
+    public static int CurentLevel { get => _curentLevel; set => _curentLevel = value; }
+
     public static readonly List<LevelData> Levels = new();
 
-    public static int CurentLevel()
+    public static int GetCurentLevel()
     {
         return _curentLevel;
+    }
+
+    public static LevelData GetCurrentLevel()
+    {
+        if (Levels.Count <= _curentLevel)
+        {
+            _curentLevel = Levels.Count - 1;
+        }
+        return Levels[_curentLevel];
     }
 
     public static void Init()
@@ -34,7 +45,7 @@ public class LevelsData
 
         var level2 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundPurple"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundGrey"),
             EnemyObj = allEnemyInfo.GetGameObj("Enemy2"),
             IntervalCreationBonus = 2f,
             IntervalCreationLife = 6.4f,
@@ -188,17 +199,9 @@ public class LevelsData
         Levels.Add(level10);
     }
 
-    public static void SwitchLevel()
-    {
-        ++_curentLevel;
-    }
+    //public static void SwitchLevel()
+    //{
+    //    ++_curentLevel;
+    //}
 
-    public static LevelData GetCurrentLevel()
-    {
-        if (Levels.Count <= _curentLevel)
-        {
-            _curentLevel = Levels.Count - 1;            
-        }
-            return Levels[_curentLevel];
-    }    
 }

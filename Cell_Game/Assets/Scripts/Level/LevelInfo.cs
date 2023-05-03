@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +7,7 @@ public class LevelInfo : ScriptableObject
 {    
     [SerializeField] private List<DataLevel> _levels;
 
-    public Texture GetLevel(string id)
+    public Sprite GetLevel(string id)
     {
         foreach (var item in _levels)
         {
@@ -22,6 +21,6 @@ public class LevelInfo : ScriptableObject
     class DataLevel
     {
         public string Id;
-        public Texture LevelBackground;
+        public Sprite LevelBackground;
     }
 }
