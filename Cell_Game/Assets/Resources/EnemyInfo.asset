@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: EnemyInfo
   m_EditorClassIdentifier: 
   _enemes:
-  - Id: Enemy
+  - Id: EnemyA
     Enemy: {fileID: 2927740274511036961, guid: ed1340990553ac64ab895065034672ef, type: 3}
-  - Id: Enemy2
+  - Id: EnemyB
     Enemy: {fileID: 1567745909928180495, guid: 87322bb262883234ab13c90e5111a40b, type: 3}
-  - Id: Enemy3
+  - Id: EnemyC
     Enemy: {fileID: 1840622596348379883, guid: 04df46cff5deca144b9f1861784b2214, type: 3}
-  - Id: EnemyP
+  - Id: EnemyD
     Enemy: {fileID: 692807919784617325, guid: afe870c7b7e5dc7419d2ec190237c712, type: 3}
-  - Id: EnemyPJ
+  - Id: EnemyE
     Enemy: {fileID: 2553904185014633485, guid: 9a103c46d3a406c4690822972753753c, type: 3}
-  - Id: EnemyUV
+  - Id: EnemyF
     Enemy: {fileID: 6085026618924918018, guid: 92d29754db74b914fbc35dec13607584, type: 3}
-  - Id: EnemyY
+  - Id: EnemyG
     Enemy: {fileID: 6343502265631545351, guid: 8c7842ffcaa81c147b1a43d1c62a12d3, type: 3}
-  - Id: EnemyYR
+  - Id: EnemyH
     Enemy: {fileID: 4285534313300192156, guid: a13333fa97b222e44b6b33353d1af5b2, type: 3}
-  - Id: EnemyYT
+  - Id: EnemyI
     Enemy: {fileID: 1133089068318247665, guid: 1e843e8492ee3fa45ba891e82392a55d, type: 3}
-  - Id: EnemyYT
+  - Id: EnemyJ
     Enemy: {fileID: 537330769318847170, guid: 91fa79b01b700754fb62f11ca5e1b319, type: 3}

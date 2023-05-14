@@ -29,8 +29,8 @@ public class LevelsData
 
         var level1 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundBlue"),
-            EnemyObj = allEnemyInfo.GetGameObj("Enemy"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background1"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyA"),
             IntervalCreationBonus = 1.8f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -45,8 +45,8 @@ public class LevelsData
 
         var level2 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundGrey"),
-            EnemyObj = allEnemyInfo.GetGameObj("Enemy2"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background2"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyB"),
             IntervalCreationBonus = 2f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -61,8 +61,8 @@ public class LevelsData
 
         var level3 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundBlack"),
-            EnemyObj = allEnemyInfo.GetGameObj("Enemy3"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background3"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyC"),
             IntervalCreationBonus = 1.8f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -77,8 +77,8 @@ public class LevelsData
 
         var level4 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundGrey"),
-            EnemyObj = allEnemyInfo.GetGameObj("EnemyP"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background4"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyD"),
             IntervalCreationBonus = 1.8f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -93,8 +93,8 @@ public class LevelsData
 
         var level5 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundGrey"),
-            EnemyObj = allEnemyInfo.GetGameObj("EnemyPJ"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background5"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyE"),
             IntervalCreationBonus = 1.8f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -109,8 +109,8 @@ public class LevelsData
 
         var level6 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundGrey"),
-            EnemyObj = allEnemyInfo.GetGameObj("EnemyUV"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background6"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyF"),
             IntervalCreationBonus = 1.8f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -125,8 +125,8 @@ public class LevelsData
 
         var level7 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundGrey"),
-            EnemyObj = allEnemyInfo.GetGameObj("EnemyY"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background7"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyG"),
             IntervalCreationBonus = 1.8f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -141,8 +141,8 @@ public class LevelsData
 
         var level8 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundGrey"),
-            EnemyObj = allEnemyInfo.GetGameObj("EnemyYR"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background8"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyH"),
             IntervalCreationBonus = 1.8f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -157,8 +157,8 @@ public class LevelsData
 
         var level9 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundGrey"),
-            EnemyObj = allEnemyInfo.GetGameObj("EnemyYT"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background9"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyI"),
             IntervalCreationBonus = 1.8f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -173,8 +173,8 @@ public class LevelsData
 
         var level10 = new LevelData
         {
-            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("BackgroundGrey"),
-            EnemyObj = allEnemyInfo.GetGameObj("EnemyZ"),
+            LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background10"),
+            EnemyObj = allEnemyInfo.GetGameObj("EnemyJ"),
             IntervalCreationBonus = 1.8f,
             IntervalCreationLife = 6.4f,
             IntervalCreationShield = 12.1f,
@@ -197,11 +197,5 @@ public class LevelsData
         Levels.Add(level8);
         Levels.Add(level9);
         Levels.Add(level10);
-    }
-
-    //public static void SwitchLevel()
-    //{
-    //    ++_curentLevel;
-    //}
-
+    }   
 }

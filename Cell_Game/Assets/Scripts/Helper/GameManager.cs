@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,10 +25,17 @@ public class GameManager : MonoBehaviour
         LevelsData.Init();
         CreatingObject.Init(LevelsData.Levels[0]);
         backgroundGame.Init(LevelsData.Levels[LevelsData.CurentLevel]);
-    }    
+    }
 
     public void SwitchLevel()
     {
-        LevelsData.CurentLevel++;        
+        if (LevelsData.CurentLevel >= 10)
+        {
+            LevelsData.CurentLevel = 1;
+        }
+        else
+        {
+            LevelsData.CurentLevel++;
+        }               
     }
 }

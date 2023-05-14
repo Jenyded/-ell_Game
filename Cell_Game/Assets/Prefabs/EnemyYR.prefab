@@ -78,13 +78,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 730d262412dc13f40ba16688ff6a3600, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: a2a6e1d3418f19749981fc7b1e458ee7, type: 3}
+  m_Color: {r: 0.9811321, g: 0.97701836, b: 0.9765041, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.64, y: 0.74}
+  m_Size: {x: 7.66, y: 0.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -108,7 +108,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 7.66, y: 0.92}
-    newSize: {x: 7.64, y: 0.74}
+    newSize: {x: 7.66, y: 0.92}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ca9b1e6058d66439df73be2e2e0692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Effect: {fileID: 4654743809343061312, guid: c8a64d1c345645f40898910fe1d2b27a, type: 3}
+  Effect: {fileID: 4654743809343061312, guid: db34079a440b3b4489631480e440ebb7, type: 3}
 --- !u!114 &4285534313300192154
 MonoBehaviour:
   m_ObjectHideFlags: 0
