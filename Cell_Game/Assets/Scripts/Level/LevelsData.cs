@@ -31,32 +31,32 @@ public class LevelsData
         {
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background1"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyA"),
-            IntervalCreationBonus = 1.8f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
-            IntervalCreationEnemy = 1f,
-            IntervalCreationLevelKey = 7.1f,
-            FallSpeedBonus = 3,
-            FallSpeedLife = 3,
-            FallSpeedShield = 3,
-            FallSpeedEnemy = 3,
-            FallSpeedLevelKey = 3
+            IntervalCreationBonus = 1.5f,
+            IntervalCreationLife = 8.2f,
+            IntervalCreationShield = 31.0f,
+            IntervalCreationEnemy = 1.0f,
+            IntervalCreationLevelKey = 40.0f,
+            FallSpeedBonus = 3.0f,
+            FallSpeedLife = 3.0f,
+            FallSpeedShield = 3.0f,
+            FallSpeedEnemy = 3.0f,
+            FallSpeedLevelKey = 3.0f
         };
 
         var level2 = new LevelData
         {
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background2"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyB"),
-            IntervalCreationBonus = 2f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
+            IntervalCreationBonus = 2.0f,
+            IntervalCreationLife = 9.4f,
+            IntervalCreationShield = 30.2f,
             IntervalCreationEnemy = 0.9f,
-            IntervalCreationLevelKey = 16f,
-            FallSpeedBonus = 4,
-            FallSpeedLife = 4,
-            FallSpeedShield = 4,
-            FallSpeedEnemy = 4,
-            FallSpeedLevelKey = 4
+            IntervalCreationLevelKey =60.0f,
+            FallSpeedBonus = 4.0f,
+            FallSpeedLife = 4.0f,
+            FallSpeedShield = 4.0f,
+            FallSpeedEnemy = 4.0f,
+            FallSpeedLevelKey = 4.0f
         };
 
         var level3 = new LevelData
@@ -64,31 +64,31 @@ public class LevelsData
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background3"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyC"),
             IntervalCreationBonus = 1.8f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
-            IntervalCreationEnemy = 1f,
-            IntervalCreationLevelKey = 15f,
-            FallSpeedBonus = 5,
-            FallSpeedLife = 5,
-            FallSpeedShield = 5,
-            FallSpeedEnemy = 5,
-            FallSpeedLevelKey = 5
+            IntervalCreationLife = 7.4f,
+            IntervalCreationShield = 29.1f,
+            IntervalCreationEnemy = 1.0f,
+            IntervalCreationLevelKey = 60.0f,
+            FallSpeedBonus = 5.0f,
+            FallSpeedLife = 5.0f,
+            FallSpeedShield = 5.0f,
+            FallSpeedEnemy = 5.0f,
+            FallSpeedLevelKey = 5.0f
         };
 
         var level4 = new LevelData
         {
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background4"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyD"),
-            IntervalCreationBonus = 1.8f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
-            IntervalCreationEnemy = 1f,
-            IntervalCreationLevelKey = 14f,
-            FallSpeedBonus = 5,
-            FallSpeedLife = 5,
-            FallSpeedShield = 5,
-            FallSpeedEnemy = 5,
-            FallSpeedLevelKey = 5
+            IntervalCreationBonus = 2.0f,
+            IntervalCreationLife = 8.1f,
+            IntervalCreationShield = 26.1f,
+            IntervalCreationEnemy = 1.0f,
+            IntervalCreationLevelKey = 60.0f,
+            FallSpeedBonus = 4.0f,
+            FallSpeedLife = 4.0f,
+            FallSpeedShield = 4.0f,
+            FallSpeedEnemy = 4.0f,
+            FallSpeedLevelKey = 4.0f
         };
 
         var level5 = new LevelData
@@ -96,15 +96,15 @@ public class LevelsData
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background5"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyE"),
             IntervalCreationBonus = 1.8f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
-            IntervalCreationEnemy = 1f,
-            IntervalCreationLevelKey = 12f,
-            FallSpeedBonus = 5,
-            FallSpeedLife = 5,
-            FallSpeedShield = 5,
-            FallSpeedEnemy = 5,
-            FallSpeedLevelKey = 5
+            IntervalCreationLife = 8.9f,
+            IntervalCreationShield = 18.1f,
+            IntervalCreationEnemy = 1.0f,
+            IntervalCreationLevelKey = 60.0f,
+            FallSpeedBonus = 5.1f,
+            FallSpeedLife = 5.1f,
+            FallSpeedShield = 5.1f,
+            FallSpeedEnemy = 5.1f,
+            FallSpeedLevelKey = 5.1f
         };
 
         var level6 = new LevelData
@@ -112,31 +112,31 @@ public class LevelsData
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background6"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyF"),
             IntervalCreationBonus = 1.8f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
-            IntervalCreationEnemy = 1f,
-            IntervalCreationLevelKey = 10f,
-            FallSpeedBonus = 5,
-            FallSpeedLife = 5,
-            FallSpeedShield = 5,
-            FallSpeedEnemy = 5,
-            FallSpeedLevelKey = 5
+            IntervalCreationLife = 8.4f,
+            IntervalCreationShield = 26.1f,
+            IntervalCreationEnemy = 1.0f,
+            IntervalCreationLevelKey = 65.0f,
+            FallSpeedBonus = 5.2f,
+            FallSpeedLife = 5.2f,
+            FallSpeedShield = 5.2f,
+            FallSpeedEnemy = 5.2f,
+            FallSpeedLevelKey = 5.0f
         };
 
         var level7 = new LevelData
         {
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background7"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyG"),
-            IntervalCreationBonus = 1.8f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
-            IntervalCreationEnemy = 1f,
-            IntervalCreationLevelKey = 9f,
-            FallSpeedBonus = 5,
-            FallSpeedLife = 5,
-            FallSpeedShield = 5,
-            FallSpeedEnemy = 5,
-            FallSpeedLevelKey = 5
+            IntervalCreationBonus = 1.5f,
+            IntervalCreationLife = 9.4f,
+            IntervalCreationShield = 17.1f,
+            IntervalCreationEnemy = 1.0f,
+            IntervalCreationLevelKey = 70.0f,
+            FallSpeedBonus = 5.0f,
+            FallSpeedLife = 5.0f,
+            FallSpeedShield = 5.0f,
+            FallSpeedEnemy = 5.0f,
+            FallSpeedLevelKey = 5.0f
         };
 
         var level8 = new LevelData
@@ -144,47 +144,47 @@ public class LevelsData
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background8"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyH"),
             IntervalCreationBonus = 1.8f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
-            IntervalCreationEnemy = 1f,
-            IntervalCreationLevelKey = 12f,
-            FallSpeedBonus = 5,
-            FallSpeedLife = 5,
-            FallSpeedShield = 5,
-            FallSpeedEnemy = 5,
-            FallSpeedLevelKey = 5
+            IntervalCreationLife = 8.5f,
+            IntervalCreationShield = 25.1f,
+            IntervalCreationEnemy = 1.0f,
+            IntervalCreationLevelKey = 70.0f,
+            FallSpeedBonus = 5.0f,
+            FallSpeedLife = 5.0f,
+            FallSpeedShield = 5.0f,
+            FallSpeedEnemy = 5.0f,
+            FallSpeedLevelKey = 5.0f
         };
 
         var level9 = new LevelData
         {
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background9"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyI"),
-            IntervalCreationBonus = 1.8f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
-            IntervalCreationEnemy = 1f,
-            IntervalCreationLevelKey = 14f,
-            FallSpeedBonus = 5,
-            FallSpeedLife = 5,
-            FallSpeedShield = 5,
-            FallSpeedEnemy = 5,
-            FallSpeedLevelKey = 5
+            IntervalCreationBonus = 1.9f,
+            IntervalCreationLife = 10.4f,
+            IntervalCreationShield = 18.1f,
+            IntervalCreationEnemy = 1.0f,
+            IntervalCreationLevelKey = 75.0f,
+            FallSpeedBonus = 5.0f,
+            FallSpeedLife = 5.0f,
+            FallSpeedShield = 5.0f,
+            FallSpeedEnemy = 5.0f,
+            FallSpeedLevelKey = 5.0f
         };
 
         var level10 = new LevelData
         {
             LevelBackgroundGame = allLevelBackgroundInfo.GetLevel("Background10"),
             EnemyObj = allEnemyInfo.GetGameObj("EnemyJ"),
-            IntervalCreationBonus = 1.8f,
-            IntervalCreationLife = 6.4f,
-            IntervalCreationShield = 12.1f,
-            IntervalCreationEnemy = 1f,
-            IntervalCreationLevelKey = 16f,
-            FallSpeedBonus = 5,
-            FallSpeedLife = 5,
-            FallSpeedShield = 5,
-            FallSpeedEnemy = 5,
-            FallSpeedLevelKey = 5
+            IntervalCreationBonus = 2.1f,
+            IntervalCreationLife = 9.5f,
+            IntervalCreationShield = 20.1f,
+            IntervalCreationEnemy = 0.9f,
+            IntervalCreationLevelKey = 80.0f,
+            FallSpeedBonus = 5.0f,
+            FallSpeedLife = 5.0f,
+            FallSpeedShield = 5.0f,
+            FallSpeedEnemy = 5.0f,
+            FallSpeedLevelKey = 5.0f
         };
 
         Levels.Add(level1);
