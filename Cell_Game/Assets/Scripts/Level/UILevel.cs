@@ -7,6 +7,6 @@ public class UILevel : MonoBehaviour
     
     private void Update()
     {
-        _levelText.text = LevelsData.GetCurentLevel().ToString();
+        _levelText.text = (LevelsData.GetCurentLevel() + 1).ToString();
     }
 }
