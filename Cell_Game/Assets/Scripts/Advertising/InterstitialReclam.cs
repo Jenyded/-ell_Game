@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds.Api;
 
@@ -15,7 +13,7 @@ public class InterstitialReclam : MonoBehaviour
         _interstitial.LoadAd(request);
     }
 
-    public void Show() 
+    public void ShowASD() 
     {
         if(_interstitial.IsLoaded())
         {

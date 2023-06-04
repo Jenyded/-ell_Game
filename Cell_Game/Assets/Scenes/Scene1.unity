@@ -1724,8 +1724,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420041}
-  - component: {fileID: 519420043}
-  - component: {fileID: 519420042}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1815,30 +1813,6 @@ MonoBehaviour:
   _life: {fileID: 8507936732257313156, guid: b3b14d0a6f5f831439f85659706db3b9, type: 3}
   _shield: {fileID: 7362780276147569825, guid: 498c66bffaea41f4aa7ca20f54ab5c6c, type: 3}
   _levelKey: {fileID: 3757256153882585192, guid: f98e9178669f8504b9ad691526544679, type: 3}
---- !u!114 &519420042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa421535fecbd724899a1a58fd16a997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &519420043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 428c1205754fa774a8241e38a07ce2c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &538007918
 GameObject:
   m_ObjectHideFlags: 0
@@ -4201,7 +4175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPauseGame: 0
-  IntReclama: {fileID: 519420042}
   _buttonPauseGameMenu: {fileID: 1435276679}
   _buttonRestart: {fileID: 283995417}
   _buttonSwitchLevel: {fileID: 337952195}

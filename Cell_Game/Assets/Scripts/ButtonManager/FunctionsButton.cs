@@ -5,8 +5,6 @@ public class FunctionsButton : MonoBehaviour
 {
     public bool IsPauseGame;
     public static FunctionsButton Instance;
-    public InterstitialReclam IntReclama; //для показа рекламы
-    private int _countAttempts; //для показа рекламы
     [SerializeField] private GameObject _buttonPauseGameMenu;
     [SerializeField] private GameObject _buttonRestart;
     [SerializeField] private GameObject _buttonSwitchLevel;
@@ -23,14 +21,10 @@ public class FunctionsButton : MonoBehaviour
                 Pause();
         }
     }
-
-    private void Start()
-    {
-        _countAttempts = PlayerPrefs.GetInt("Count_Losses"); //для рекламы
-    }
-
+    
     public void SetActiveButtonRestart()
     {
+        ADSRunning.Instance.ASD(); //Реклама
         _buttonRestart.SetActive(true);
     }
 
@@ -40,13 +34,6 @@ public class FunctionsButton : MonoBehaviour
         Player.Life = 5;
         Player.Score = 0;
         Player.IsShield = false;
-        _countAttempts += 1; //для рекламы
-        PlayerPrefs.SetInt("Count_Losses", _countAttempts); //для рекламы
-        if (PlayerPrefs.GetInt("Count_Losses") == 3) //для рекламы
-        {
-            IntReclama.Show();
-            PlayerPrefs.SetInt("Count_Losses", 0);
-        }
     }
 
     public void Pause()

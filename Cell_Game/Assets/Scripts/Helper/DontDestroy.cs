@@ -6,14 +6,10 @@ public class DontDestroy : MonoBehaviour
 
     void Start()
     {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
+        if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
+            DontDestroyOnLoad(gameObject);            
+        }       
+    }   
 }
