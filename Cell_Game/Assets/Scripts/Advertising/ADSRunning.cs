@@ -14,29 +14,17 @@ public class ADSRunning : MonoBehaviour
         if (_countAttempts == _numberOfAttempts)
         {
             Debug.Log("Реклама включена!");
-            IntReclama.ShowASD();
+            IntReclama.ShowADS();
             _countAttempts = 0;
+        }
+        else
+        {
+            IntReclama.InterstitialLoad();            
         }
     }
 
     private void Awake()
     {
         Instance = this;
-    }
-
-    //реклама с записью в реестр:
-    //public void ASDsh()
-    //{
-    //    _countAttempts += 1;
-    //    PlayerPrefs.SetInt("Count_Losses", _countAttempts);
-    //    if (PlayerPrefs.GetInt("Count_Losses") == 3)
-    //    {
-    //        IntReclama.ShowASD();
-    //        PlayerPrefs.SetInt("Count_Losses", 0);
-    //    }
-    //}
-    //private void Start()
-    //{
-    //    _countAttempts = PlayerPrefs.GetInt("Count_Losses");
-    //}
+    }   
 }
