@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ADSRunning : MonoBehaviour
 {
-    public static ADSRunning Instance;
+    /*public static ADSRunning Instance;
     public InterstitialReclam IntReclama;
     private int _countAttempts;
     private readonly int _numberOfAttempts = 3;
@@ -10,10 +10,10 @@ public class ADSRunning : MonoBehaviour
     public void ASD()
     {
         _countAttempts++;
-        Debug.Log("Колличество попыток " + _countAttempts);
+        Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ " + _countAttempts);
         if (_countAttempts == _numberOfAttempts)
         {
-            Debug.Log("Реклама включена!");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
             IntReclama.ShowADS();
             _countAttempts = 0;
         }
@@ -26,5 +26,5 @@ public class ADSRunning : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-    }   
+    }   */
 }

@@ -3,7 +3,7 @@ using GoogleMobileAds.Api;
 
 public class InterstitialReclam : MonoBehaviour
 {
-    private InterstitialAd _interstitial;
+    /*private InterstitialAd _interstitial;
     private const string _adUnitId = "ca-app-pub-3940256099942544/1033173712";
 
     public void InterstitialLoad()
@@ -16,7 +16,7 @@ public class InterstitialReclam : MonoBehaviour
                 _interstitial = new InterstitialAd(_adUnitId);
                 AdRequest request = new AdRequest.Builder().Build();
                 _interstitial.LoadAd(request);
-                Debug.Log("Загрузка рекламы !!!");
+                Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ !!!");
             }
         }
     }
@@ -34,5 +34,5 @@ public class InterstitialReclam : MonoBehaviour
         _interstitial = new InterstitialAd(_adUnitId);
         AdRequest request = new AdRequest.Builder().Build();
         _interstitial.LoadAd(request);
-    }
+    }*/
 }

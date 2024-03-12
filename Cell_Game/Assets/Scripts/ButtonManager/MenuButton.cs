@@ -22,7 +22,7 @@ public class MenuButton : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("Игра закрылась");
+        Debug.Log("The game closed");
         Application.Quit();
     }
 }

@@ -24,7 +24,7 @@ public class FunctionsButton : MonoBehaviour
     
     public void SetActiveButtonRestart()
     {
-        ADSRunning.Instance.ASD(); //Реклама
+       // ADSRunning.Instance.ASD(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         _buttonRestart.SetActive(true);
     }
 
