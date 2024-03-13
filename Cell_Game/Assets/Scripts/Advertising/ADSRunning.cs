@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ADSRunning : MonoBehaviour
 {
-    /*public static ADSRunning Instance;
+    public static ADSRunning Instance;
     public InterstitialReclam IntReclama;
     private int _countAttempts;
     private readonly int _numberOfAttempts = 3;
@@ -26,5 +26,5 @@ public class ADSRunning : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-    }   */
+    }   
 }
