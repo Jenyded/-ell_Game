@@ -1,10 +1,10 @@
 using UnityEngine;
-using GoogleMobileAds.Api;
+//using GoogleMobileAds.Api;
 
 public class AdInitialize : MonoBehaviour
 {
-    private void Awake()
+    /* private void Awake()
     {
         MobileAds.Initialize(initStatus => { });
-    }
+    }*/
 }

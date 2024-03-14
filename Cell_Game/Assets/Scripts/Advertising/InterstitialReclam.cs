@@ -1,9 +1,9 @@
 using UnityEngine;
-using GoogleMobileAds.Api;
+//using GoogleMobileAds.Api;
 
 public class InterstitialReclam : MonoBehaviour
 {
-    private InterstitialAd _interstitial;
+    /*private InterstitialAd _interstitial;
     private const string _adUnitId = "ca-app-pub-3940256099942544/1033173712";
 
     private void Start()
@@ -34,5 +34,5 @@ public class InterstitialReclam : MonoBehaviour
         {
             _interstitial.Show();
         }
-    }
+    }*/
 }

@@ -3,8 +3,8 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     public Transform player;
-    private float _lefStide = -1.86f;
-    private float _rightSide = 1.86f;
+    private float _lefStide = -1.497f;
+    private float _rightSide = 1.497f;
 
     private void OnMouseDrag()
     {

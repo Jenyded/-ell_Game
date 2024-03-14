@@ -13,8 +13,8 @@ public class CreatingObject : MonoBehaviour
     private float _countingTimeEnemy;
     private float _countingLevelKey;
 
-    private readonly float _creationPosXLeft = -1.96f;
-    private readonly float _creationPosXright = 1.49f;
+    private readonly float _creationPosXLeft = -1.497f;
+    private readonly float _creationPosXright = 1.497f;
     private readonly float _creationPosY = 7.5f;
     private readonly float _timeDestroy = 5f;
 
