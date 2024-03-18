@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
@@ -9,13 +11,21 @@ public class Player : MonoBehaviour
     public static bool IsShield;    
     public static Player Instance;
     [SerializeField] ShieldTimer shildTimer;
-    [SerializeField] GameObject shielSpheredObj;       
+    [SerializeField] GameObject shieldSpheredObj;       
 
     private void Awake()
     {
         Instance = this;
     }
 
+    private void Update()
+    {
+        if (Instance.GetShieldTimer().isCoolDown == false)
+        {
+            Shield.IsShieldActivity = false;
+        }
+    }
+    
     public ShieldTimer GetShieldTimer()
     {
         return shildTimer;
@@ -23,6 +33,6 @@ public class Player : MonoBehaviour
 
     public void SetViewShield(bool state)
     {
-        shielSpheredObj.SetActive(state);
+        shieldSpheredObj.SetActive(state);
     }    
 }

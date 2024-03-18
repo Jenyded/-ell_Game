@@ -1,3 +1,4 @@
+using Unity.Properties;
 using UnityEngine;
 
 public class LifeSubtraction : LifeClash
@@ -9,7 +10,6 @@ public class LifeSubtraction : LifeClash
             if (Shield.IsShieldActivity != true)
             {
                 Player.Life--;
-
                 if (Player.Life <= -1)
                 {
                     Player.Instance.gameObject.SetActive(false);
@@ -17,5 +17,5 @@ public class LifeSubtraction : LifeClash
                 }
             }
         }
-    }    
+    }
 }

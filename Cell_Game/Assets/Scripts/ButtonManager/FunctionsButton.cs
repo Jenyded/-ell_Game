@@ -24,7 +24,7 @@ public class FunctionsButton : MonoBehaviour
     
     public void SetActiveButtonRestart()
     {
-       // ADSRunning.Instance.ASD(); //�������
+       // ADSRunning.Instance.ASD(); //реклама
         _buttonRestart.SetActive(true);
     }
 
@@ -78,6 +78,7 @@ public class FunctionsButton : MonoBehaviour
         GameManager.Instance.SwitchLevel();
         Time.timeScale = 1f;
         IsPauseGame = false;
+        Shield.IsShieldActivity = false;
         AudioManager.instance.Play("Background_Music");
     }
 }
