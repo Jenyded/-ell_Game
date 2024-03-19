@@ -11,7 +11,7 @@ public class CreatingObject : MonoBehaviour
     private float _countingTimeLife;
     private float _countingTimeShield;
     private float _countingTimeEnemy;
-    private float _countingLevelKey;
+    [HideInInspector] public float _countingLevelKey;
 
     private readonly float _creationPosXLeft = -1.35f;
     private readonly float _creationPosXright = 1.35f;
@@ -19,7 +19,8 @@ public class CreatingObject : MonoBehaviour
     private readonly float _timeDestroy = 5f;
 
     private LevelData _levelData;
-    private bool _isNeedUpdate = false;    
+    private bool _isNeedUpdate = false;
+    
 
     public void Init(LevelData levelData)
     {
