@@ -15,11 +15,13 @@ public class CreatingObject : MonoBehaviour
 
     private readonly float _creationPosXLeft = -1.35f;
     private readonly float _creationPosXright = 1.35f;
-    private readonly float _creationPosY = 7.5f;
-    private readonly float _timeDestroy = 5f;
+    private readonly float _creationPosY = 5.0f;
+    private readonly float _timeDestroy = 4.0f;
 
     private LevelData _levelData;
     private bool _isNeedUpdate = false;
+
+    public static float IntervalCreationObj;
     
 
     public void Init(LevelData levelData)
@@ -66,6 +68,7 @@ public class CreatingObject : MonoBehaviour
         }
 
         _countingLevelKey += Time.deltaTime;
+        IntervalCreationObject(_levelData.IntervalCreationLevelKey);
         if (_countingLevelKey >= _levelData.IntervalCreationLevelKey)
         {
             TimeCreation(_levelKey, _levelData.FallSpeedLevelKey);
@@ -82,5 +85,11 @@ public class CreatingObject : MonoBehaviour
             falingObj.Init(speed);
         }
         Destroy(copy, _timeDestroy);
-    }    
+    }   
+    
+    public float IntervalCreationObject(float a)
+    {
+        IntervalCreationObj = a;
+        return IntervalCreationObj;
+    }
 }
