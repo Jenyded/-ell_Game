@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class FunctionsButton : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class FunctionsButton : MonoBehaviour
     [SerializeField] private GameObject _buttonPauseGameMenu;
     [SerializeField] private GameObject _buttonRestart;
     [SerializeField] private GameObject _buttonSwitchLevel;
+    //[SerializeField] private RectTransform _butonDoTween;//!!!!
+    
+    //private Tween _tween;//!!!!
+    [SerializeField] private DoTween _doTween;
 
 
     private void Awake()
@@ -42,6 +47,9 @@ public class FunctionsButton : MonoBehaviour
         Time.timeScale = 0;
         IsPauseGame = true;
         AudioManager.instance.Stop("Background_Music");
+        _doTween.AnimationInPopups();//!!!!
+        /*_tween.Kill();
+        _tween = _butonDoTween.DOLocalMove(new Vector3(-2.27f, 137f, 0), 1.5f); */
     }
 
     public void Continue()
