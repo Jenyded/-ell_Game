@@ -9,10 +9,8 @@ public class FunctionsButton : MonoBehaviour
     [SerializeField] private GameObject _buttonPauseGameMenu;
     [SerializeField] private GameObject _buttonRestart;
     [SerializeField] private GameObject _buttonSwitchLevel;
-    //[SerializeField] private RectTransform _butonDoTween;//!!!!
     
-    //private Tween _tween;//!!!!
-    [SerializeField] private DoTween _doTween;
+    [SerializeField] private DoTweenWindow doTweenWindow;
 
 
     private void Awake()
@@ -29,7 +27,7 @@ public class FunctionsButton : MonoBehaviour
     
     public void SetActiveButtonRestart()
     {
-       // ADSRunning.Instance.ASD(); //реклама
+       // ADSRunning.Instance.ASD(); //reklam
         _buttonRestart.SetActive(true);
     }
 
@@ -44,12 +42,10 @@ public class FunctionsButton : MonoBehaviour
     public void Pause()
     {
         _buttonPauseGameMenu.SetActive(true);
-        Time.timeScale = 0;
+       // Time.timeScale = 0;
         IsPauseGame = true;
         AudioManager.instance.Stop("Background_Music");
-        _doTween.AnimationInPopups();//!!!!
-        /*_tween.Kill();
-        _tween = _butonDoTween.DOLocalMove(new Vector3(-2.27f, 137f, 0), 1.5f); */
+        doTweenWindow.AnimationInPopups().OnComplete(() => {Time.timeScale = 0;}); //!!!!
     }
 
     public void Continue()

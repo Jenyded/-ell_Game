@@ -5457,7 +5457,7 @@ MonoBehaviour:
   _buttonPauseGameMenu: {fileID: 1435276679}
   _buttonRestart: {fileID: 283995417}
   _buttonSwitchLevel: {fileID: 337952195}
-  _doTween: {fileID: 1617499175}
+  doTweenWindow: {fileID: 1617499175}
 --- !u!4 &1617499174
 Transform:
   m_ObjectHideFlags: 0
