@@ -43,7 +43,7 @@ public class FunctionsButton : MonoBehaviour
     {
         _buttonPauseGameMenu.SetActive(true);
        // Time.timeScale = 0;
-        IsPauseGame = true;
+       // IsPauseGame = true;
         AudioManager.instance.Stop("Background_Music");
         doTweenWindow.AnimationInPopups().OnComplete(() => {Time.timeScale = 0;}); //!!!!
     }
@@ -51,8 +51,8 @@ public class FunctionsButton : MonoBehaviour
     public void Continue()
     {
         _buttonPauseGameMenu.SetActive(false);
-        Time.timeScale = 1f;
-        IsPauseGame = false;
+       // Time.timeScale = 1f;
+       // IsPauseGame = false;
         AudioManager.instance.Play("Background_Music");
     }
     public void ResetHighScore()
@@ -62,7 +62,7 @@ public class FunctionsButton : MonoBehaviour
 
     public void LosdMenu()
     {
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
@@ -70,8 +70,8 @@ public class FunctionsButton : MonoBehaviour
     {
         AudioManager.instance.Stop("Background_Music");
         _buttonSwitchLevel.SetActive(true);
-        Time.timeScale = 0;
-        IsPauseGame = true;
+        //Time.timeScale = 0;
+       // IsPauseGame = true;
         UIButton.Instance.ReflectLevel();
         AudioManager.instance.Play("Sound_Victory");
     }
@@ -80,8 +80,8 @@ public class FunctionsButton : MonoBehaviour
     {
         SceneManager.LoadScene("Scene1");
         GameManager.Instance.SwitchLevel();
-        Time.timeScale = 1f;
-        IsPauseGame = false;
+        //Time.timeScale = 1f;
+        //IsPauseGame = false;
         Shield.IsShieldActivity = false;
         AudioManager.instance.Play("Background_Music");
     }

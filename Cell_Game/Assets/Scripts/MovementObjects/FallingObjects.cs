@@ -14,6 +14,12 @@ public class FallingObjects : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("Update11111111111");
+        if (GamePause.instance.IsPaused)
+        {
+            return;
+        }
+        
         if (_isNeedUpdate == false)
         {
             return;

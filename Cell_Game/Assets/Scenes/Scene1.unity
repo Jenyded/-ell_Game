@@ -2185,7 +2185,7 @@ RectTransform:
   m_GameObject: {fileID: 554451433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0119002, y: 1.0119002, z: 1.0119002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1233651306}
@@ -2193,10 +2193,10 @@ RectTransform:
   - {fileID: 511263506}
   m_Father: {fileID: 1435276680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.27, y: -118}
-  m_SizeDelta: {x: 551.9553, y: 700.8876}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 6, y: -134}
+  m_SizeDelta: {x: -528.0447, y: -1355.1124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554451435
 MonoBehaviour:
@@ -3546,12 +3546,12 @@ RectTransform:
   - {fileID: 1396249540}
   - {fileID: 283995418}
   - {fileID: 1902310736}
-  - {fileID: 1435276680}
   - {fileID: 2048503479}
   - {fileID: 1512618002}
   - {fileID: 938861952}
   - {fileID: 1320419002}
   - {fileID: 337952196}
+  - {fileID: 1435276680}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4122,6 +4122,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: FunctionsButton, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1617499176}
+        m_TargetAssemblyTypeName: GamePause, Assembly-CSharp
+        m_MethodName: SetPause
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4856,8 +4868,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -63.99414}
-  m_SizeDelta: {x: 0, y: 137}
+  m_AnchoredPosition: {x: 5, y: -66.24707}
+  m_SizeDelta: {x: 0, y: 132.49414}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1435276681
 MonoBehaviour:
@@ -4924,7 +4936,7 @@ RectTransform:
   m_GameObject: {fileID: 1448086859}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.10229934, y: 0.10229934, z: 0.10229934}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1158528349}
@@ -4934,8 +4946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.27, y: 1328}
-  m_SizeDelta: {x: 551.9553, y: 700.8876}
+  m_AnchoredPosition: {x: 317, y: 793}
+  m_SizeDelta: {x: 50, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448086861
 MonoBehaviour:
@@ -5434,6 +5446,7 @@ GameObject:
   - component: {fileID: 1617499174}
   - component: {fileID: 1617499173}
   - component: {fileID: 1617499175}
+  - component: {fileID: 1617499176}
   m_Layer: 0
   m_Name: ButtonManadger
   m_TagString: Untagged
@@ -5486,6 +5499,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RectTransform: {fileID: 1448086860}
+--- !u!114 &1617499176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617499172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6e1824a0c314e9e8f3a92b57ab62a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1631381924
 GameObject:
   m_ObjectHideFlags: 0
@@ -6134,6 +6159,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1617499176}
+        m_TargetAssemblyTypeName: GamePause, Assembly-CSharp
+        m_MethodName: SetPause
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1902310738
 MonoBehaviour:
