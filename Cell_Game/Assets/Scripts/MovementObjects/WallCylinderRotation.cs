@@ -4,7 +4,6 @@ public class WallCylinderRotation : MonoBehaviour
 {
     void FixedUpdate()
     {
-        Debug.Log("FixedUpdate00000000000");
         if (GamePause.instance.IsPaused)
         {
             return;

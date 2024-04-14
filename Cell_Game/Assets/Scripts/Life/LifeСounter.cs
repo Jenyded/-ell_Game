@@ -10,6 +10,10 @@ public class LifeСounter : LifeClash
             {
               Player.Life++;
             }            
-        }        
+        } 
+        if (tag.Equals("Destroy_panel"))
+        {
+            base.BaseDestroy();
+        }
     }    
 }

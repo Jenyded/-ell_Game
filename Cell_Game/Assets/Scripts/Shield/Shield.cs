@@ -26,5 +26,9 @@ public class Shield : ShieldClash
             }
             Destroy(gameObject);
         }
+        if (tag.Equals("Destroy_panel"))
+        {
+            base.BaseDestroy();
+        }
     }   
 }

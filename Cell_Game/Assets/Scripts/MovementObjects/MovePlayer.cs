@@ -8,6 +8,10 @@ public class MovePlayer : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        if (GamePause.instance.IsPaused)
+        {
+            return;
+        }
         if(Player.Life >= 0)
         {
             if (FunctionsButton.Instance.IsPauseGame == false)

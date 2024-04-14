@@ -1,15 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using DG.Tweening;
 
 public class FunctionsButton : MonoBehaviour
 {
     public bool IsPauseGame;
     public static FunctionsButton Instance;
-    [SerializeField] private GameObject _buttonPauseGameMenu;
+    [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _panelPause;
     [SerializeField] private GameObject _buttonRestart;
     [SerializeField] private GameObject _buttonSwitchLevel;
-    
     [SerializeField] private DoTweenWindow doTweenWindow;
 
 
@@ -41,18 +40,21 @@ public class FunctionsButton : MonoBehaviour
 
     public void Pause()
     {
-        _buttonPauseGameMenu.SetActive(true);
-       // Time.timeScale = 0;
-       // IsPauseGame = true;
+        _pauseMenu.SetActive(true);
+        _panelPause.SetActive(true);
+        //Time.timeScale = 0;
+        //IsPauseGame = true;
         AudioManager.instance.Stop("Background_Music");
-        doTweenWindow.AnimationInPopups().OnComplete(() => {Time.timeScale = 0;}); //!!!!
+        //doTweenWindow.AnimationInPopups().OnComplete(() => {Time.timeScale = 0;}); //!!!!
     }
 
     public void Continue()
     {
-        _buttonPauseGameMenu.SetActive(false);
-       // Time.timeScale = 1f;
-       // IsPauseGame = false;
+        Invoke("СloseWindowContinue", 0.3f);
+        //_panelPause.SetActive(false);
+        //_buttonPauseGameMenu.SetActive(false);
+        //Time.timeScale = 1f;
+        //IsPauseGame = false;
         AudioManager.instance.Play("Background_Music");
     }
     public void ResetHighScore()
@@ -71,7 +73,7 @@ public class FunctionsButton : MonoBehaviour
         AudioManager.instance.Stop("Background_Music");
         _buttonSwitchLevel.SetActive(true);
         //Time.timeScale = 0;
-       // IsPauseGame = true;
+        //IsPauseGame = true;
         UIButton.Instance.ReflectLevel();
         AudioManager.instance.Play("Sound_Victory");
     }
@@ -84,5 +86,11 @@ public class FunctionsButton : MonoBehaviour
         //IsPauseGame = false;
         Shield.IsShieldActivity = false;
         AudioManager.instance.Play("Background_Music");
+    }
+    
+    public void СloseWindowContinue()
+    {
+        _pauseMenu.SetActive(false);
+        _panelPause.SetActive(false);
     }
 }

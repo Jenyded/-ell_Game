@@ -14,7 +14,6 @@ public class FallingObjects : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Update11111111111");
         if (GamePause.instance.IsPaused)
         {
             return;
@@ -24,7 +23,6 @@ public class FallingObjects : MonoBehaviour
         {
             return;
         }
-
         transform.position -= new Vector3(_fallSpeedPosX, _fallSpeedPosY * Time.deltaTime);
     }
 }

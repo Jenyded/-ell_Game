@@ -16,7 +16,7 @@ public class CreatingObject : MonoBehaviour
     private readonly float _creationPosXLeft = -1.35f;
     private readonly float _creationPosXright = 1.35f;
     private readonly float _creationPosY = 5.0f;
-    private readonly float _timeDestroy = 4.0f;
+    //private readonly float _timeDestroy = 4.0f;
 
     private LevelData _levelData;
     private bool _isNeedUpdate = false;
@@ -32,12 +32,10 @@ public class CreatingObject : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Update22222222");
         if (GamePause.instance.IsPaused)
         {
             return;
         }
-        
         if (_isNeedUpdate == false)
         {
             return;
@@ -90,7 +88,7 @@ public class CreatingObject : MonoBehaviour
         {
             falingObj.Init(speed);
         }
-        Destroy(copy, _timeDestroy);
+        //Destroy(copy, _timeDestroy);
     }   
     
     public float IntervalCreationObject(float a)

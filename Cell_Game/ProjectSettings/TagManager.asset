@@ -12,6 +12,7 @@ TagManager:
   - ShieldTag
   - PlayerTag
   - LevelKeyTeg
+  - Destroy_panel
   layers:
   - Default
   - TransparentFX

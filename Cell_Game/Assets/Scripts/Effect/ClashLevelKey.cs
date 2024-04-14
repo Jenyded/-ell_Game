@@ -15,6 +15,10 @@ public class ClashLevelKey : Clash
             base.BaseDestroy();
             FunctionsButton.Instance.Invoke("SetActiveButtonSwitchLevel", 1f);
         }
+        if (tag.Equals("Destroy_panel"))
+        {
+            base.BaseDestroy();
+        }
     }
 
     public override void EnableEffect()

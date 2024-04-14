@@ -13,6 +13,10 @@ public class ClashBonus : Clash
             }
             base.BaseDestroy();
         }
+        if (tag.Equals("Destroy_panel"))
+        {
+            base.BaseDestroy();
+        }
     }
 
     public override void EnableEffect()
